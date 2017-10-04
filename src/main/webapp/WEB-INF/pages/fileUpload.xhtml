@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="uploadApp">
+    <head>
+        <title>Upload File</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link type="text/css" rel="stylesheet" href="/Dashboard/resources/bower/bootstrap/dist/css/bootstrap.min.css" />
+        <link href="/Dashboard/resources/css/custom.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/Dashboard/resources/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+        <script src="/Dashboard/resources/js/ng-file-upload.min.js" type="text/javascript"></script>
+        <script src="/Dashboard/resources/js/uploadController.js"></script>
+    </head>
+    <body ng-controller="uploadController">
+        <form enctype="multipart/form-data">
+            <input type="file" file-model="myFile" />
+            <button ng-click="uploadFile()">upload me</button>
+        </form>
+        <button ng-click="addFiles()">Show</button>
+        <button ng-click="showFiles()">Show</button>
+
+        <ul>
+            <li ng-repeat="file in listOfFiles"><a ng-click="getFile(file)">{{file}}</a></li>
+        </ul>
+
+
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{value}}" aria-valuemin="0" style="width: {{value}}%" aria-valuemax="100">
+                {{value}}%
+            </div>
+        </div>
+    </body>
+</html>

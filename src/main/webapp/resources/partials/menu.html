@@ -1,0 +1,68 @@
+<ul class="nav side-menu">
+    <li ng-if="fullUser.profile == 'A'"><a><i class="fa fa-line-chart"></i>Statistique</a>
+        <ul class="nav child_menu">
+            <li>
+                <a  href="/Dashboard/new">
+                    Nouvelle Statistique
+                    <i class="fa fa-terminal pull-right"></i>
+                </a>
+            </li>
+            <li>
+                <a ng-click="add()">
+                    Modifier Statistique
+                    <i class="fa fa-edit pull-right"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li><a><i class="fa fa-window-restore"></i>Dashboards</a>
+        <ul class="nav child_menu">
+            <li>
+                <a  href="/Dashboard/create/new">
+                    Nouveau dashboard
+                    <i class="fa fa-terminal pull-right"></i>
+                </a>
+            </li>
+            <li>
+                <a href="/Dashboard/dashboards/search">
+                    Modifier dashboard
+                    <i class="fa fa-edit pull-right"></i>
+                </a>
+            </li>
+            <li>
+                <a href="/Dashboard/dashboards/consulte">
+                    Consulter dashboard
+                    <i class="fa fa-eye pull-right"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+    <li ng-if="fullUser.profile == 'A'"><a><i class="fa fa-user"></i> Utilisateur</a>
+        <ul class="nav child_menu">
+            <li>
+                <a href="/Dashboard/users/ajout">
+                    Nouvel Utilisateur
+                    <i class="fa fa-terminal pull-right"></i>
+                </a>
+            </li>
+            <li >
+                <a href="/Dashboard/users/">
+                    Modifier Utilisateur
+                    <i class="fa fa-edit pull-right"></i>
+                </a>
+
+            </li>
+        </ul>
+    </li>
+    <li ng-if="fullUser.profile == 'A'"><a><i class="fa fa-address-card"></i> Role</a> 
+        <ul class="nav child_menu">
+            <li>
+                <a href="/Dashboard/roles">
+                    Modifier Role
+                    <i class="fa fa-edit pull-right"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+
+</ul>
