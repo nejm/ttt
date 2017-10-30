@@ -1,9 +1,13 @@
 package com.smi.service;
 
+import com.smi.controller.NotificationController;
 import com.smi.dao.StatistiqueDao;
+import com.smi.model.Notification;
 import com.smi.model.Statistique;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -25,6 +29,7 @@ public class StatistiqueServiceImpl implements StatistiqueService {
     @Override
     @Transactional
     public Long add(Statistique s) {
+               
         return statistiqueDao.add(s);
     }
 

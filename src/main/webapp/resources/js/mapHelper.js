@@ -371,7 +371,7 @@ Tn["sfax"]   =  {
         "lat": "36.725638",
         "lng": "9.181692",
         "population": "59567"
-    }
+    };
     Tn["jendouba"] = {
         "city": "Jendouba",
         "admin": "Jendouba",
@@ -382,7 +382,7 @@ Tn["sfax"]   =  {
         "lat": "36.501136",
         "lng": "8.780239",
         "population": "51408"
-    }
+    };
     Tn["kef"] = {
         "city": "El Kef",
         "admin": "Kef",
@@ -393,7 +393,7 @@ Tn["sfax"]   =  {
         "lat": "36.174239",
         "lng": "8.704863",
         "population": "47979"
-    }
+    };
     Tn["mahdia"] = {
         "city": "Mahdia",
         "admin": "Mahdia",
@@ -404,7 +404,7 @@ Tn["sfax"]   =  {
         "lat": "35.504722",
         "lng": "11.062222",
         "population": "45977"
-    }
+    };
     Tn["sidi bouzid"] = {
         "city": "Sidi Bouzid",
         "admin": "Sidi Bouzid",
@@ -415,7 +415,7 @@ Tn["sfax"]   =  {
         "lat": "35.038234",
         "lng": "9.484935",
         "population": "42098"
-    }
+    };
     Tn["tozeur"] = {
         "city": "Tozeur",
         "admin": "Tozeur",
@@ -426,7 +426,7 @@ Tn["sfax"]   =  {
         "lat": "33.919683",
         "lng": "8.13352",
         "population": "39504"
-    }
+    };
     Tn["siliana"] = {
         "city": "Siliana",
         "admin": "Siliana",
@@ -437,7 +437,7 @@ Tn["sfax"]   =  {
         "lat": "36.084966",
         "lng": "9.370818",
         "population": "26960"
-    }
+    };
     Tn["kebili"] = {
         "city": "Kebili",
         "admin": "K\u00e9bili",
@@ -448,7 +448,7 @@ Tn["sfax"]   =  {
         "lat": "33.704387",
         "lng": "8.969034",
         "population": "19875"
-    }
+    };
     Tn["ben gardane"] = {
         "city": "Ben Gardane",
         "admin": "M\u00e9denine",
@@ -459,7 +459,7 @@ Tn["sfax"]   =  {
         "lat": "33.13783",
         "lng": "11.219649",
         "population": "19843"
-    }
+    };
     Tn["zaghouan"] = {
         "city": "Zaghouan",
         "admin": "Zaghouan",
@@ -470,7 +470,7 @@ Tn["sfax"]   =  {
         "lat": "36.402907",
         "lng": "10.142925",
         "population": "16911"
-    }
+    };
     Tn["dehiba"] = {
         "city": "Dehiba",
         "admin": "Tataouine",
@@ -481,7 +481,7 @@ Tn["sfax"]   =  {
         "lat": "32.007992",
         "lng": "10.701353",
         "population": "3525"
-    }
+    };
    Tn["sousse"] = {
         "city": "Sousse",
         "admin": "Sousse",
@@ -492,7 +492,7 @@ Tn["sfax"]   =  {
         "lat": "35.825388",
         "lng": "10.636991",
         "population": ""
-    }
+    };
     Tn["ben arous"] = {
         "city": "Ben Arous",
         "admin": "Tunis",
@@ -503,7 +503,7 @@ Tn["sfax"]   =  {
         "lat": "36.753056",
         "lng": "10.218889",
         "population": ""
-    }
+    };
     Tn["medenine"] = {
         "city": "Medenine",
         "admin": "M\u00e9denine",
@@ -514,7 +514,7 @@ Tn["sfax"]   =  {
         "lat": "33.354947",
         "lng": "10.505478",
         "population": ""
-    }
+    };
     Tn["manouba"] = {
         "city": "Manouba",
         "admin": "Tunis",
@@ -525,7 +525,7 @@ Tn["sfax"]   =  {
         "lat": "36.808029",
         "lng": "10.097205",
         "population": ""
-    }
+    };
     Tn["monastir"] = {
         "city": "Monastir",
         "admin": "Monastir",
@@ -536,8 +536,7 @@ Tn["sfax"]   =  {
         "lat": "35.783333",
         "lng": "10.833333",
         "population": ""
-    }
-;
+    };
 function updateCustomMarkers(event) {
     // get map object
     var map = event.chart;

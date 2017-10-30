@@ -90,6 +90,7 @@ public class AngularController {
         List<Statistique> stats = statistiqueService.findAll();
         return new ResponseEntity<List<Statistique>>(stats, HttpStatus.OK);
     }
+    
 
     @RequestMapping(value = "/rest/statistique/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Statistique> getById(@PathVariable Long id) {

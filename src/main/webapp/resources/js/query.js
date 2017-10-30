@@ -1,11 +1,5 @@
 
-/**
- * jointure de la structure (conception)
- * @param {source de données 1 JSON} obj1
- * @param {source de données 2 JSON} obj2
- * @returns {Array} Structure unifiée
- */
-var merge = function (obj1, obj2) {
+merge = function (obj1, obj2) {
     var struct = [];
     struct = obj1;
     for (var elem in obj2) {
@@ -15,12 +9,6 @@ var merge = function (obj1, obj2) {
     }
     return struct;
 }
-/**
- * Sélection
- * @param {JSON} json
- * @param {ARRAY} fields (selected fields)
- * @returns {Array} Projection
- */
 select = function (json, fields) {
     //console.log("selection")
     var t = [];
@@ -78,8 +66,8 @@ select = function (json, fields) {
             result = max(result, array[i].attribute, field);
         } else if (array[i].op == 'distinct') {
             distinctattr.push(array[i].attribute)
-        } else if (array[i].op == 'count'){
-             countattr.push(array[i].attribute);
+        } else if (array[i].op == 'count') {
+            countattr.push(array[i].attribute);
         }
     }
     if (distinctattr.length > 0)
@@ -101,10 +89,10 @@ normilize = function (json, attributes) {
     for (var i = 0; i < json.length; i++) {
         res[i] = {};
         for (var j = 0; j < attributes.length; j++) {
-            if (json[i][attributes[j]] != null) {
-                res[i][attributes[j]] = json[i][attributes[j]];
-            } else {
+            if(typeof json[i][attributes[j]] == "undefined" || typeof json[i][attributes[j]] == "object"){
                 res[i][attributes[j]] = "-";
+            } else {
+                res[i][attributes[j]] = json[i][attributes[j]];
             }
         }
 
@@ -132,7 +120,7 @@ standirize = function (json, attrs, attrs2) {
     return res;
 }
 
-function removeEmptyElem(ary) {
+removeEmptyElem = function(ary) {
     for (var i = ary.length - 1; i >= 0; i--) {
         if (ary[i] == "") {
             ary.splice(i, 1);
@@ -154,13 +142,9 @@ union = function (json1, json2, attrs, attrs2, unionAttr) {
     var att = removeEmptyElem(els);
     var res = json1;
     res = res.concat(json2);
-    //console.log("before any chinanagon", res)
     result.result = normilize(res, att);
-    //console.log("normilize any chinanagon", result.result)
     result.result = standirize(result.result, attrs, attrs2);
-    //console.log("standirize any chinanagon", result.result)
     result.attributes = att;
-    //console.log("after any chinanagon", result.result, att)
     return result;
 }
 
@@ -170,7 +154,7 @@ conditionIsTrue = function (values1, values2, attributes) {
             return false;
     }
     return true;
-}
+};
 
 sumGroup = function (json, attributes, sumattr) {
     //console.log("sumGroup", json, attributes, sumattr)
@@ -215,6 +199,29 @@ sumGroup = function (json, attributes, sumattr) {
     //console.log("sumGroup result", data);
     return {data: data, count: count};
 }
+
+count = function (result, attributesOn, countattr) {
+    var res = [], resAux = result;
+    res.push(result[0]);
+    res[0]['count'] = 1;
+    for (var j = 1; j < resAux.length; j++) {
+        var found = false;
+        var i =0;
+        while(!found && res.length > i){
+            if (conditionIsTrue(res[i], resAux[j], attributesOn)) {
+                res[i]['count']++;
+                found = true;
+            }
+            i++;
+        }
+        if(!found){
+            res.push(resAux[j]);
+            res[res.length - 1]["count"] = 1;
+        }
+    }
+    return res;
+
+};
 
 sum = function (json, fieldon, field) {
     var res = {
@@ -509,10 +516,17 @@ where2 = function (json, attr, operator, attr2) {
 joining = function (obj1, obj2, fields1, fields2, operation) {
     var f1, f2;
     for (var i = 0; i < fields1.length; i++) {
-        f1 = fields1[i].substring(fields1[i].indexOf(':') + 2);
-        f2 = fields2[i].substring(fields2[i].indexOf(':') + 2);
+        if(fields1[i].indexOf(':') != -1)
+            f1 = fields1[i].substring(fields1[i].indexOf(':') + 2);
+        else
+            f1 = fields1[i];
+        
+        if(fields2[i].indexOf(':') != -1)
+            f2 = fields2[i].substring(fields2[i].indexOf(':') + 2);
+        else
+            f2 = fields2[i];
         if (operation[i] == '=') {
-            if (!(obj1[f1] == obj2[f2]))
+            if (!(obj1[f1] === obj2[f2]))
             {
                 return false;
             }
@@ -527,31 +541,28 @@ joining = function (obj1, obj2, fields1, fields2, operation) {
                 return false;
             }
         } else if (operation[i] == '!=') {
-            if (!(obj1[f1] != obj2[f2]))
+            if (!(obj1[f1] !== obj2[f2]))
             {
                 return false;
             }
         }
     }
-    //console.log("nenenneenenen", obj1, obj2, fields1, fields2, operation)
-    let a = {};
+    var a = {};
     var tableName1 = fields1[0].substring(0, fields1[0].indexOf(':'));
     var tableName2 = fields2[0].substring(0, fields2[0].indexOf(':'));
-    for (let v in obj1) {
+    for (var v in obj1) {
         a[tableName1 + ': ' + v] = obj1[v];
     }
-    for (let v in obj2) {
+    for (var v in obj2) {
         a[tableName2 + ': ' + v] = obj2[v];
     }
     return a;
 }
 
 join = function (json1, json2, fields1, fields2, operations) {
-    //console.log("jointure operation", fields1, fields2);
+    console.log("join begins");
     var result = [];
     var joined;
-    var auxJson1 = json1;
-    var auxJson2 = json2;
     let a;
     for (var i = 0; i < json1.length; i++) {
         joined = false;
@@ -564,7 +575,7 @@ join = function (json1, json2, fields1, fields2, operations) {
         }
 
     }
-    //console.log("jointure operation", result)
+    console.log("join ends");
     return result;
 }
 

@@ -1,8 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://java.sun.com/jsf/core">
+<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Login Page</title>
@@ -11,8 +9,6 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css" />
         <style>
-            @import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
-            @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
 
             body{
                 margin: 0;
@@ -107,7 +103,7 @@
                 margin-top: 10px;
             }
 
-            .login input[type=button]{
+            .login input[type=submit]{
                 width: 260px;
                 height: 35px;
                 background: #fff;
@@ -122,11 +118,11 @@
                 margin-top: 10px;
             }
 
-            .login input[type=button]:hover{
+            .login input[type=submit]:hover{
                 opacity: 0.8;
             }
 
-            .login input[type=button]:active{
+            .login input[type=submit]:active{
                 opacity: 0.6;
             }
 
@@ -140,7 +136,7 @@
                 border: 1px solid rgba(255,255,255,0.9);
             }
 
-            .login input[type=button]:focus{
+            .login input[type=submit]:focus{
                 outline: none;
             }
 
@@ -153,27 +149,22 @@
             }
         </style>
     </head>
-    <body>
+    <body style="overflow: hidden">
         <div class="body"></div>
         <div class="grad"></div>
         <div class="header">
             <div>Dashboard</div>
         </div>
-        <br />
+        <br/>
         <div class="login"> 
-            <form id='loginForm'
-                  action="/Dashboard/j_spring_security_check" method='POST'>
+            <form id="loginForm"
+                  action="/Dashboard/j_spring_security_check" method="post">
                 <input type="text" name="username"  autofocus="" /><br />
                 <input name="password" type="password"  placeholder="Password" /><br />
-                <input type="button" value="Login" onclick="myFunction()" />
+                <input type="submit" value="Se connecter" />
                 <input type="hidden" name="${_csrf.parameterName}"
                        value="${_csrf.token}" />
             </form>
         </div>
-        <script>
-            function myFunction() {
-                document.getElementById("loginForm").submit();
-            }
-        </script>
     </body>
 </html>

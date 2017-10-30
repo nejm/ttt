@@ -1,5 +1,6 @@
 package com.smi.controller;
 
+import com.smi.config.Push;
 import com.smi.service.StatistiqueService;
 import java.security.Principal;
 import javax.servlet.http.Cookie;
@@ -42,7 +43,7 @@ public class HelloController {
     @RequestMapping(value = "/new", method = RequestMethod.GET)
     public ModelAndView newPage(Principal principal) {
         ModelAndView model = new ModelAndView();
-        model.addObject("user", principal.getName().toUpperCase());
+        model.addObject("user", principal.getName());
         model.addObject("id", 0);
         model.setViewName("new_1");
         return model;
@@ -143,8 +144,7 @@ public class HelloController {
             model.addObject("msg", "You've been logged out successfully.");
         }
 
-        if (error == null && logout == null && principal != null) {
-            System.out.println("pppppppppppppppppppppppppppp" + principal.toString());
+        if (error == null && logout == null && principal != null) {           
             return new ModelAndView("redirect:/home");
         }
 
@@ -192,5 +192,22 @@ public class HelloController {
         model.setViewName("rawData");
         return model;
     }
+    
+    @RequestMapping(value = "/remote", method = RequestMethod.GET)
+    public ModelAndView remote() {
+        ModelAndView model = new ModelAndView();
+        model.setViewName("remote");
+        return model;
+    }
+    
+    @RequestMapping(value = "/chat", method = RequestMethod.GET)
+    public ModelAndView chat(Principal principal) {
+        ModelAndView model = new ModelAndView();
+        model.addObject("user", principal.getName().toUpperCase());
+        model.setViewName("chat");
+        return model;
+    }
+    
+    
 
 }

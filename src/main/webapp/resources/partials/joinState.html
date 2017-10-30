@@ -12,11 +12,11 @@
 
     <hr />
     <div style="position:absolute; top:50px; right:0px;">
-        <js-plumb-endpoint ng-repeat="endpoint in state.targets" anchor="RightMiddle" uuid="{{endpoint.uuid}}" settings="targetEndpointStyle">
+        <js-plumb-endpoint ng-repeat="endpoint in state.targets track by $index" anchor="RightMiddle" uuid="{{endpoint.uuid}}" settings="targetEndpointStyle">
         </js-plumb-endpoint>
     </div>
     <div style="position:absolute; top:50px; left:0px;">
-        <js-plumb-endpoint ng-repeat="endpoint in state.targets1" anchor="LeftMiddle" uuid="{{endpoint.uuid}}" settings="targetEndpointStyle">
+        <js-plumb-endpoint ng-repeat="endpoint in state.targets1 track by $index" anchor="LeftMiddle" uuid="{{endpoint.uuid}}" settings="targetEndpointStyle">
         </js-plumb-endpoint>
     </div>
     <div style="position:absolute; top: 100px; left:0px;">
@@ -44,7 +44,7 @@
                 </div>
                 <div class="col-sm-4" style="margin-left: -10px">
                     <select name="op" class="form-control" ng-model="state.sRightAttributes[$index]">
-                        <option ng-repeat="att in state.rightAttributes" ng-if="att!='null.null' && att!=''">{{att}}</option>
+                        <option ng-repeat="att in state.rightAttributes track by $index" ng-if="att!='null.null' && att!=''">{{att}}</option>
                     </select>
                 </div>
                 <div class="col-sm-1">

@@ -12,14 +12,16 @@ myApp.controller('userController', function ($scope, $http, $window, $uibModal) 
     $scope.users = [];
 
     $scope.init = function (user) {
+        $http.get("/Dashboard/rest/roles").then(function (response) {
+            $scope.roles = response.data;
+        });
         $http.get("/Dashboard/rest/users").then(function (response) {
             $scope.users = response.data;
         });
-        $http.get("/Dashboard/rest/users/get/"+user.toLowerCase()).then(function(response){
+        $http.get("/Dashboard/rest/users/get/" + user.toLowerCase()).then(function (response) {
             console.log(response.data)
             $scope.fullUser = response.data;
         });
-        
     };
 
     $scope.openModal = function (name) {
@@ -36,7 +38,7 @@ myApp.controller('userController', function ($scope, $http, $window, $uibModal) 
             $scope.modalInstance = null;
         }
     };
-    
+
     $scope.addUser = function () {
         $http.get("/Dashboard/rest/users/exist/" + $scope.newUser.username)
                 .then(function (response) {
@@ -52,11 +54,11 @@ myApp.controller('userController', function ($scope, $http, $window, $uibModal) 
                                             id: res.data,
                                             roles: $scope.profiles
                                         };
-                                        $http.post("/Dashboard/rest/users/profiles", profiles).then(function(){
+                                        $http.post("/Dashboard/rest/users/profiles", profiles).then(function () {
                                             $scope.closeModal();
                                         });
-                                    }else{
-                                       $scope.closeModal(); 
+                                    } else {
+                                        $scope.closeModal();
                                     }
                                 });
                     }
@@ -65,10 +67,7 @@ myApp.controller('userController', function ($scope, $http, $window, $uibModal) 
 
     $scope.allProfiles = [];
     $scope.profiles = [];
-    $http.get("/Dashboard/rest/roles").then(function (response) {
-        $scope.allProfiles = response.data;
-        console.log(response.data)
-    });
+
 
     $scope.addOrEdit = function (id) {
         if (id == 0) {
@@ -121,9 +120,6 @@ myApp.controller('userController', function ($scope, $http, $window, $uibModal) 
         return index;
     }
 
-    $http.get("/Dashboard/rest/roles").then(function (response) {
-        $scope.roles = response.data;
-    });
 
     $scope.getRole = function (id) {
         for (var i = 0; i < $scope.roles.length; i++) {
@@ -154,7 +150,7 @@ myApp.controller('userController', function ($scope, $http, $window, $uibModal) 
             $http.get("/Dashboard/rest/profiles/" + user.userId).then(function (response) {
                 $scope.addProfiles(response.data);
                 $scope.openModal('editUser');
-            })
+            });
         });
     };
 
@@ -185,24 +181,24 @@ myApp.controller('userController', function ($scope, $http, $window, $uibModal) 
             });
         });
     }
-    
+
     $scope.saveEditRole = function () {
         console.log($scope.usersAssignes);
         var usersId = [];
-        for(var i=0;i<$scope.usersAssignes.length;i++){
+        for (var i = 0; i < $scope.usersAssignes.length; i++) {
             usersId.push($scope.usersAssignes[i].userId);
         }
         var obj = {};
         obj.role = $scope.currentRole.roleId;
         obj.users = usersId;
-        
-        $http.post("/Dashboard/rest/role/users/add",obj).then(function(){
+
+        $http.post("/Dashboard/rest/role/users/add", obj).then(function () {
             $scope.closeModal();
-            $.notify("Modification avec succées","success");
+            $.notify("Modification avec succées", "success");
         });
-        
+
     }
-    
+
     $scope.addProfil = function (index) {
         if (typeof $scope.allProfiles[index] != 'undefined') {
             $scope.profiles.push($scope.allProfiles[index]);
@@ -227,22 +223,22 @@ myApp.controller('userController', function ($scope, $http, $window, $uibModal) 
         $scope.users.push($scope.usersAssignes[index]);
         $scope.usersAssignes.splice(index, 1);
     };
-    
-    $scope.addRole = function(){
+
+    $scope.addRole = function () {
         $scope.openModal('addRole');
     }
-    
-    $scope.saveRole = function(role){
-        $http.post("/Dashboard/rest/roles",{roleName : role}).then(function(response){
+
+    $scope.saveRole = function (role) {
+        $http.post("/Dashboard/rest/roles", {roleName: role}).then(function (response) {
             $scope.closeModal();
-            $.notify("Role ajouter avec succées avec id = "+response.data,"success");
+            $.notify("Role ajouter avec succées avec id = " + response.data, "success");
         });
     }
-    
-    $scope.deleteRole = function(role){
-        $http.post("/Dashboard/rest/roles/delete",role).then(function(){
+
+    $scope.deleteRole = function (role) {
+        $http.post("/Dashboard/rest/roles/delete", role).then(function () {
             $scope.closeModal();
-            $.notify("Role supprimer avec succées","success");
+            $.notify("Role supprimer avec succées", "success");
         });
     }
 
