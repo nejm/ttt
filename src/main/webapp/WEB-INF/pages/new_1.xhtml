@@ -75,6 +75,11 @@
         <script src="/Dashboard/resources/js/app.js"></script>
         <script src="/Dashboard/resources/js/jsplumb.js"></script>
         <script src="/Dashboard/resources/js/dataTables.bootstrap.min.js"></script>
+        
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+        <script src="/Dashboard/resources/js/map/hiresmap.js" type="text/javascript"></script>
 
         <style>
             .log{
@@ -401,7 +406,7 @@
                     <div class="form-control" style="width: 82%;margin-bottom: 0;height: 95px; overflow: auto" >
                         <div ng-repeat="log in log">
                             <span  class="success" ng-if="log.type == 'success'">{{log.log}} </span>
-                            <span  class="danger"  ng-if="log.type == 'error' " >{{log.log}} </span>
+                            <span  class="danger"  ng-if="log.type == 'error'" >{{log.log}} </span>
                         </div>
                     </div>
                 </div>

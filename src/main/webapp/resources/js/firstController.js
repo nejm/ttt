@@ -95,8 +95,8 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
         },
         isSource: true,
         maxConnections: -1,
-        connector: ["Flowchart", {stub: [30, 30], gap: 20, cornerRadius: 10}],
-        //connector:[ "Bezier", { curviness:100 } ],
+        connector: "Flowchart",
+                //["Flowchart", {stub: [30, 30], gap: 20, cornerRadius: 10}],
         connectorStyle: {
             lineWidth: 4,
             strokeStyle: "#61B7CF",
@@ -1216,9 +1216,7 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
     };
 
     $scope.executeQuery = function (reslt, reslt2, op) {
-        $scope.debug.results.push({
-            raw: [reslt, reslt2]
-        });
+
         var a = false;
         var joined = false;
         var res = [];
@@ -1241,21 +1239,37 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
                     }
                     return obj2;
                 });
+
             $scope.statAttributes = $scope.getAttributes(op.classes[0].id).
                     concat($scope.getAttributes(op.classes[1].id));
-            var array = $.map(op.attributes2, function (value) {
+
+            console.log(op)
+
+            var array = $.map(op.attributes, function (value) {
                 return [op.classes[0].name + ": " + value];
             });
-            var array2 = $.map(op.attributes, function (value) {
+            var array2 = $.map(op.attributes2, function (value) {
                 return [op.classes[1].name + ": " + value];
             });
             var arrayop = $.map(op.operation, function (value) {
                 return [value];
             });
-            res = join(reslt, reslt2, array, array2, arrayop);
-            $scope.debug.results.push({
-                join: res
-            });
+
+            var att = array[0].substring(array[0].indexOf(':') + 2);
+            if (typeof reslt[0][att] == 'undefined') {
+                array = [];
+                array2 = [];
+                array = $.map(op.attributes, function (value) {
+                    return [op.classes[1].name + ": " + value];
+                });
+                array2 = $.map(op.attributes2, function (value) {
+                    return [op.classes[0].name + ": " + value];
+                });
+                res = join(reslt, reslt2, array2, array, arrayop);
+            } else {
+                res = join(reslt, reslt2, array, array2, arrayop);
+            }
+
         } else if (op.type === 'select') {
 
             res = select(reslt, op.attributes);
@@ -1496,9 +1510,22 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
     };
 
     $scope.generateMap = function (res, codeISO, mapPays, mapData, showmodal) {
-        $scope.debug.results.push({
-            map: res
-        });
+        setTimeout(function () {
+            var map = new Datamap({
+                scope: 'world',
+                element: document.getElementById('container'),
+                projection: 'mercator',
+                done: function (datamap) {
+                    datamap.svg.call(d3.behavior.zoom().on("zoom", redraw));
+
+                    function redraw() {
+                        datamap.svg.selectAll("g").attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+                    }
+                }
+            });
+        }, 1000);
+
+
         $scope.typeMap = 1;
         if ($scope.typeMap == 1) {
             $scope.typeState = "map";

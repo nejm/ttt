@@ -1,7 +1,10 @@
 package com.smi.controller;
 
 import com.smi.config.Push;
+import com.smi.config.SendMail;
 import com.smi.service.StatistiqueService;
+import com.warrenstrange.googleauth.GoogleAuthenticator;
+import com.warrenstrange.googleauth.GoogleAuthenticatorKey;
 import java.security.Principal;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
@@ -22,9 +25,14 @@ public class HelloController {
     @Autowired
     @Qualifier("statService")
     StatistiqueService statistiqueService;
+    
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView welcomePage(Principal principal) {
+        
+        GoogleAuthenticator gAuth = new GoogleAuthenticator();
+        System.out.println("key "+gAuth.createCredentials().getKey());
+        SendMail.send("nejmeddinehidri@gmail.com",gAuth.createCredentials().getKey());
         ModelAndView model = new ModelAndView();
         model.setViewName("login");
         return model;

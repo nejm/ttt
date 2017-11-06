@@ -213,6 +213,18 @@
             <version>1.0</version>
             <type>jar</type>
         </dependency>
+        
+        <dependency>
+            <groupId>com.warrenstrange</groupId>
+            <artifactId>googleauth</artifactId>
+            <version>1.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4</version>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     <build>
         <finalName>SpringSecurityHelloWorld</finalName>

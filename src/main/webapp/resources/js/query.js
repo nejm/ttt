@@ -89,7 +89,7 @@ normilize = function (json, attributes) {
     for (var i = 0; i < json.length; i++) {
         res[i] = {};
         for (var j = 0; j < attributes.length; j++) {
-            if(typeof json[i][attributes[j]] == "undefined" || typeof json[i][attributes[j]] == "object"){
+            if (typeof json[i][attributes[j]] == "undefined" || typeof json[i][attributes[j]] == "object") {
                 res[i][attributes[j]] = "-";
             } else {
                 res[i][attributes[j]] = json[i][attributes[j]];
@@ -120,7 +120,7 @@ standirize = function (json, attrs, attrs2) {
     return res;
 }
 
-removeEmptyElem = function(ary) {
+removeEmptyElem = function (ary) {
     for (var i = ary.length - 1; i >= 0; i--) {
         if (ary[i] == "") {
             ary.splice(i, 1);
@@ -206,15 +206,15 @@ count = function (result, attributesOn, countattr) {
     res[0]['count'] = 1;
     for (var j = 1; j < resAux.length; j++) {
         var found = false;
-        var i =0;
-        while(!found && res.length > i){
+        var i = 0;
+        while (!found && res.length > i) {
             if (conditionIsTrue(res[i], resAux[j], attributesOn)) {
                 res[i]['count']++;
                 found = true;
             }
             i++;
         }
-        if(!found){
+        if (!found) {
             res.push(resAux[j]);
             res[res.length - 1]["count"] = 1;
         }
@@ -515,16 +515,20 @@ where2 = function (json, attr, operator, attr2) {
 
 joining = function (obj1, obj2, fields1, fields2, operation) {
     var f1, f2;
+    
     for (var i = 0; i < fields1.length; i++) {
-        if(fields1[i].indexOf(':') != -1)
+        if (fields1[i].indexOf(':') > -1)
             f1 = fields1[i].substring(fields1[i].indexOf(':') + 2);
         else
             f1 = fields1[i];
-        
-        if(fields2[i].indexOf(':') != -1)
+
+        if (fields2[i].indexOf(':') > -1)
             f2 = fields2[i].substring(fields2[i].indexOf(':') + 2);
         else
             f2 = fields2[i];
+        
+        //console.log(obj1,f1,f2);
+        
         if (operation[i] == '=') {
             if (!(obj1[f1] === obj2[f2]))
             {
@@ -548,27 +552,31 @@ joining = function (obj1, obj2, fields1, fields2, operation) {
         }
     }
     var a = {};
+    var obj = {};
     var tableName1 = fields1[0].substring(0, fields1[0].indexOf(':'));
     var tableName2 = fields2[0].substring(0, fields2[0].indexOf(':'));
     for (var v in obj1) {
         a[tableName1 + ': ' + v] = obj1[v];
+        obj[v+"_1"] = obj1[v];
     }
     for (var v in obj2) {
         a[tableName2 + ': ' + v] = obj2[v];
+        obj[v+"_2"] = obj2[v];
     }
-    return a;
+    if (fields1[0].indexOf(':') != -1)
+        return a;
+    else
+        return obj;
 }
 
 join = function (json1, json2, fields1, fields2, operations) {
-    console.log("join begins");
+    
     var result = [];
     var joined;
-    let a;
+    var a;
     for (var i = 0; i < json1.length; i++) {
-        joined = false;
         for (var j = 0; j < json2.length; j++) {
             if ((a = joining(json1[i], json2[j], fields1, fields2, operations)) != false) {
-                joined = true;
                 result.push(a);
             }
 
