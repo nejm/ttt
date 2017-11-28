@@ -55,6 +55,10 @@ my2App.controller('dashboardController', function ($scope, $http, $location) {
     };
 
     $scope.init = function (user) {
+         $http.get("/Dashboard/rest/get/data").then(function(response){
+            $scope.generalData = response.data;
+            console.log($scope.generalData);
+        });
         $http.get("/Dashboard/rest/users/get/" + user.toLowerCase()).then(function (response) {
             $scope.fullUser = response.data;
             $scope.username = $scope.fullUser.username;

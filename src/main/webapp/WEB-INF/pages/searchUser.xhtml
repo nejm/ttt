@@ -16,12 +16,30 @@
         <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
         <link href="/Dashboard/resources/css/custom.min.css" rel="stylesheet" type="text/css"/>
         <link href="/Dashboard/resources/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-       
-        
+
+
         <link href="/Dashboard/resources/css/bootstrap-dropdownhover.min.css" rel="stylesheet" />
         <link href="/Dashboard/resources/css/style.css" rel="stylesheet" type="text/css"/>
         <link type="text/css" rel="stylesheet" href="/Dashboard/resources/css/sweetalert.css" />
         <link href="/Dashboard/resources/css/usercss.css" rel="stylesheet" type="text/css"/>
+        
+        <script src="/Dashboard/resources/js/jquery/jquery.min.js" type="text/javascript"></script>
+        <script src="/Dashboard/resources/js/angularjs/angular.min.js" type="text/javascript"></script>
+        <script src="/Dashboard/resources/js/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+        <!-- bower installed -->
+        <script src="/Dashboard/resources/bower/angular-ui-slider/src/slider.js"></script>
+        <script src="/Dashboard/resources/js/bootstrap-dropdownhover.min.js" type="text/javascript"></script>
+        <script src="/Dashboard/resources/js/notify.min.js" type="text/javascript"></script>
+
+
+        <!-- out local ng stuff -->
+        <script src="/Dashboard/resources/js/ui-bootstrap-tpls-2.5.0.min.js" type="text/javascript"></script>
+        <script src="/Dashboard/resources/js/angularController/userController.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                $("#sideMenu").load("/Dashboard/resources/partials/sideAdmin.html");
+            });
+        </script>
     </head>
 
     <body class="nav-md" ng-controller="userController" ng-init="init('#{user}')">
@@ -37,11 +55,9 @@
 
                         <!-- menu profile quick info -->
                         <div class="profile clearfix">
-                            <div class="profile_pic">
-                                <img src="/Dashboard/resources/images/img.png" alt="..." class="img-circle profile_img" />
-                            </div>
-
+                           
                             <div class="clearfix"></div>
+                             <div id="sideMenu" />
                         </div>
                         <!-- /menu profile quick info -->
 
@@ -61,7 +77,7 @@
 
                 <!-- top navigation -->
                 <div class="top_nav">
-                    <div class="nav_menu menu_fixed">
+                    <div class="nav_menu">
                         <nav>
                             <div class="nav toggle">
                                 <div class="dropdown">
@@ -77,7 +93,6 @@
                                             </a>
 
                                         </li>
-
                                         <li class="divider"></li>
                                         <li ng-show="fullUser.profile == 'A'" class="dropdown ng-hide">
                                             <a>Statistiques
@@ -127,8 +142,6 @@
                                     </ul>
                                 </div>
                             </div>
-
-
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="">
                                     <a class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
@@ -136,39 +149,30 @@
                                         <span class=" fa fa-angle-down"></span>
                                     </a>
                                     <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                        <li><a href="javascript:;"> Profile</a></li>
+
                                         <li><a href="javascript:formSubmit()"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                                     </ul>
                                 </li>
-
-                                <!--<li role="presentation" class="dropdown">
+                                <li role="presentation" class="dropdown">
                                     <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                                         <i class="fa fa-envelope-o"></i>
-                                        <span class="badge bg-green"></span>
+                                        <span class="badge bg-green" ng-if="messages.count > 0">{{messages.count}}</span>
                                     </a>
                                     <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
-                                        <li>
+                                        <li ng-repeat="message in messages.messages track by $index">
                                             <a>
                                                 <span class="image"><img src="/Dashboard/resources/images/img.png" alt="Profile Image" /></span>
                                                 <span>
-                                                    <span>John Smith</span>
-                                                    <span class="time">3 mins ago</span>
+                                                    <span>{{message.user}}</span>
+                                                    <span class="time"></span>
                                                 </span>
                                                 <span class="message">
-                                                    Film festivals used to be do-or-die moments for movie makers. They were where...
+                                                    {{message.body}}
                                                 </span>
                                             </a>
                                         </li>
-                                        <li>
-                                            <div class="text-center">
-                                                <a>
-                                                    <strong>See All Alerts</strong>
-                                                    <i class="fa fa-angle-right"></i>
-                                                </a>
-                                            </div>
-                                        </li>
                                     </ul>
-                                </li>-->
+                                </li>
                             </ul>
                         </nav>
                     </div>
@@ -178,31 +182,32 @@
                 <!-- page content -->
                 <div class="right_col">
 
-                        <div class="page-title">
-                            <div class="title_left">
-                                <h3>Utilisateurs
-                                    <button class="btn btn-success" ng-click="openModal('newUserModal')">
-                                        <i class="fa fa-plus" />
-                                    </button>
-                                </h3>
-                            </div>
-                            <div class="title_right">
-                                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" ng-model="searched.username" placeholder="Search for..." />
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-default" type="button">
-                                                <i class="fa fa-search" />
-                                            </button>
-                                        </span>
-                                    </div>
+                    <div class="page-title">
+                        <div class="title_left">
+                            <h3>Utilisateurs
+
+                            </h3>
+                        </div>
+                        <div class="title_right">
+                            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" ng-model="searched.username" placeholder="Search for..." />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <i class="fa fa-search" />
+                                        </button>
+                                    </span>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
                     <div class="">
 
                         <div class="clearfix"></div>
+                        <button class="btn btn-success btn-sm" ng-click="openModal('newUserModal')">
+                            Ajouter un nouvel utilisateur
+                        </button>
                         <div class="row" style="height: 570px">
                             <div class="col-lg-12">
                                 <div class="main-box no-header clearfix">
@@ -213,13 +218,13 @@
                                                     <tr>
                                                         <th><span>Utilisateur</span></th>
                                                         <th><span>Username</span></th>
-                                                        <th><span>Roles</span></th>
+                                                        
                                                         <th class="text-center"><span>Status</span></th>
                                                         <th></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr ng-repeat="user in users | filter:searched">
+                                                    <tr ng-repeat="user in users | filter:searched track by $index">
                                                         <td>
                                                             <img src="https://bootdey.com/img/Content/user_1.jpg" alt="" />
                                                             <div>{{user.lastname + " " + user.firstname}}</div>
@@ -229,24 +234,17 @@
                                                         <td>
                                                             <p>{{user.username}}</p>
                                                         </td>
-                                                        <td>
-                                                            <div ng-repeat="role in user.roles track by $index">
-                                                                <span class="label label-primary">{{role}}</span>
-                                                            </div>
-                                                        </td>
+                                                         
                                                         <td class="text-center">
                                                             <span class="label label-success">active</span>
                                                         </td>
-                                                        
+
                                                         <td>
                                                             <button href="#" class="btn btn-default btn-sm"  ng-click="editUser(user)">
                                                                 <i class="fa fa-pencil" aria-hidden="true"></i>
-                                 
                                                             </button>
                                                         </td>
                                                     </tr>
-
-
                                                 </tbody>
                                             </table>
                                         </div>
@@ -254,8 +252,6 @@
                                 </div>
                             </div>
                         </div>
-
-
                     </div>
                 </div>
 
@@ -267,30 +263,11 @@
 
             </div>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular.min.js" type="text/javascript"></script>
-
-
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <!-- bower installed -->
-        <script src="/Dashboard/resources/bower/angular-ui-slider/src/slider.js"></script>
-        <script src="/Dashboard/resources/js/bootstrap-dropdownhover.min.js" type="text/javascript"></script>
-        <script src="/Dashboard/resources/js/notify.min.js" type="text/javascript"></script>
-
-
-        <!-- out local ng stuff -->
-        <script src="/Dashboard/resources/js/ui-bootstrap-tpls-2.5.0.min.js" type="text/javascript"></script>
-        <script src="/Dashboard/resources/js/angularController/userController.js" type="text/javascript"></script>
+        
         <script type="text/javascript">
-                                                                                function formSubmit() {
-                                                                                    document.getElementById("logoutForm").submit();
-                                                                                }
-
-        </script>
-        <script>
-                    $(function () {
-                        $("#sideMenu").load("/Dashboard/resources/partials/sideAdmin.html");
-                    });
+            function formSubmit() {
+                document.getElementById("logoutForm").submit();
+            }
         </script>
     </body>
 </html>

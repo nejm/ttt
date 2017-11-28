@@ -1,4 +1,24 @@
-
+extend = function(rs,attrs){
+    var res = rs;
+    for(var i=0;i<rs.length;i++){
+        for(var j=0;j<attrs.length;j++){
+            if(attrs[j].op == 'sub'){
+                var x;
+                if(typeof attrs[j].number == 'undefined'){
+                    x = res[i][attrs[j].attribute].length - attrs[j].start;
+                }else{
+                    x = attrs[j].number
+                }
+                res[i]["SUB_"+attrs[j].attribute] = res[i][attrs[j].attribute].substr(attrs[j].start,x);
+            }else if(attrs[j].op == 'stat'){
+                
+            }else if(attrs[j].op == 'nvl'){
+                
+            }
+        }
+    }
+    return rs;
+}
 merge = function (obj1, obj2) {
     var struct = [];
     struct = obj1;

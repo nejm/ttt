@@ -1,31 +1,24 @@
 package com.smi.controller;
 
 import java.io.File;
-import com.smi.dao.UserAndRoleDao;
 import com.smi.model.*;
 import com.smi.service.*;
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.sql.Statement;
-import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.logging.Level;
 import org.json.simple.parser.JSONParser;
 import org.apache.log4j.Logger;
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.data.jpa.datatables.mapping.DataTablesInput;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -90,7 +83,6 @@ public class AngularController {
         List<Statistique> stats = statistiqueService.findAll();
         return new ResponseEntity<List<Statistique>>(stats, HttpStatus.OK);
     }
-    
 
     @RequestMapping(value = "/rest/statistique/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Statistique> getById(@PathVariable Long id) {
@@ -411,7 +403,7 @@ public class AngularController {
             JSONParser parser = new JSONParser();
             Object obj = parser.parse(new FileReader("data.json"));
             JSONObject jsonObject = (JSONObject) obj;
-            
+
             return jsonObject;
         } catch (FileNotFoundException ex) {
             java.util.logging.Logger.getLogger(AngularController.class.getName()).log(Level.SEVERE, null, ex);
@@ -423,7 +415,18 @@ public class AngularController {
             java.util.logging.Logger.getLogger(AngularController.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
+    }
 
+    @RequestMapping(value = "/rest/get/data", method = RequestMethod.GET, produces = "application/json")
+    public @ResponseBody
+    JSONObject getJsonData() {
+        JSONObject g = new JSONObject();
+ 
+        g.put("stats", statistiqueService.findAll().size());
+        g.put("dash", dashboardService.getAllDashboards().size());
+        g.put("users", userService.findAll().size());
+        g.put("rols", roleService.findAll().size());
+        return g;
     }
 
 }

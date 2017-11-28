@@ -314,8 +314,8 @@
 
         <script src="/Dashboard/resources/js/bootstrap-select.js"></script>
         <script src="/Dashboard/resources/js/sweetalert.min.js"></script>
-        <script type="text/javascript">
-            formSubmit() {
+       <script type="text/javascript">
+            function formSubmit() {
                 document.getElementById("logoutForm").submit();
             }
             $("#myStats").on("click", function () {
@@ -330,7 +330,6 @@
                 var idTag = $(tag).attr("id");
                 $('#' + idTag + "Child").slideToggle();
             }
-
         </script>
     </body>
 </html>

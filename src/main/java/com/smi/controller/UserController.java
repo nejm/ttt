@@ -1,5 +1,5 @@
 /*
- * Copyright 2017 Nejm.
+ * Copyright 2017 Nejm Eddine Hidri.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -131,8 +131,24 @@ public class UserController {
                 u.add(us);
             }
         }
-
         return u;
+    }
+    
+    @RequestMapping(value = "/rest/profilesUser/{id}", method = RequestMethod.GET)
+    public List<Role> userAllProfiles(@PathVariable Long id) {
+        List<Usersandroles> u = new ArrayList<>();
+        Long userId;
+        for (Usersandroles us : userAndRoleService.findByUser(1l)) {
+            userId = us.getUserId();
+            if (id.equals(userId)) {
+                u.add(us);
+            }
+        }
+        List<Role> userRoles = new ArrayList<>();
+        for(Usersandroles uar : u){
+            userRoles.add(roleService.findById(uar.getRoleId()));
+        }
+        return userRoles;
     }
 
     @RequestMapping(value = "/rest/users/profiles", method = RequestMethod.POST)
@@ -154,7 +170,6 @@ public class UserController {
                 userAndRoleService.add(us);
             }
         }
-
     }
     
     @RequestMapping(value = "/rest/roles", method = RequestMethod.POST)

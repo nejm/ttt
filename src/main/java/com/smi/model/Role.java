@@ -49,6 +49,17 @@ public class Role implements Serializable {
     @Column(name = "ROLE_NAME")
     private String roleName;
 
+    @Column(name = "ROLE_DESC")
+    private String roleDesc;
+
+    public String getRoleDesc() {
+        return roleDesc;
+    }
+
+    public void setRoleDesc(String roleDesc) {
+        this.roleDesc = roleDesc;
+    }
+
     public Role() {
     }
 
@@ -96,5 +107,5 @@ public class Role implements Serializable {
     public String toString() {
         return "com.smi.model.Role[ roleId=" + roleId + " ]";
     }
-    
+
 }
