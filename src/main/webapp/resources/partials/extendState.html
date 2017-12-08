@@ -23,7 +23,7 @@
         <div id="selectdiv{{state.idd}}p{{$index}}" ng-if="state.attributes[$index].deleted != true">
             <div class="col-sm-3" style="margin-right : -25px">
                 <select name="op"  ng-change="selectAttributes(state)" id="op0" class="form-control" style="padding : -15px" ng-model="state.extendAttributes[$index].op">
-                    <option value="stat">STAT</option>
+                    <option value="stat">STATIC</option>
                     <option value="sub">SUB</option>
                     <option value="nvl">NVL</option>
                 </select>
@@ -49,6 +49,17 @@
                     </div>
                     <div class="col-sm-6">
                         <input type="text" ng-model="state.extendAttributes[$index].StatValue" class="form-control input" style="padding: 6px 6px">
+                    </div>
+                </div>
+                
+                <div ng-if="state.extendAttributes[$index].op == 'nvl'" class="row">
+                    <div class="col-sm-7">
+                        <select name="op" ng-change="extendAttributes(state,'NVL_'+state.extendAttributes[$index].nvlName,$index)" id="att0" class="form-control" ng-model="state.extendAttributes[$index].nvlName">
+                            <option ng-repeat="att in state.vattributes track by $index" ng-if="att != 'null.null' && att != null">{{att}}</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-5" style="margin-left: -15px">
+                        <input type="text" ng-model="state.extendAttributes[$index].nvlValue" class="form-control input" style="padding: 6px 6px">
                     </div>
                 </div>
                 <!--                <select name="op" ng-change="selectAttributes(state.id)" id="att0" class="form-control" ng-model="state.Sattributes[$index].attribute">

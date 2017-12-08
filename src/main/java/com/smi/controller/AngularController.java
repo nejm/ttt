@@ -77,6 +77,10 @@ public class AngularController {
     @Autowired
     @Qualifier("attributService")
     AttributService attributService;
+    
+    @Autowired
+    @Qualifier("aliasService")
+    AliasService aliasService;
 
     @RequestMapping(value = "/rest/statistique", method = RequestMethod.GET)
     public ResponseEntity<List<Statistique>> getAll() {
@@ -379,7 +383,23 @@ public class AngularController {
     public void saveAttributs(@RequestBody List<Attribut> attributs) {
         attributService.save(attributs);
     }
+    
+    @RequestMapping(value = "/rest/alias/save", method = RequestMethod.POST)
+    public void saveAlias(@RequestBody Alias alias) {
+        System.out.println(alias.getName());
+        aliasService.save(alias);
+    }
 
+    @RequestMapping(value = "/rest/alias/all", method = RequestMethod.GET)
+    public List<Alias> getAllAliases() {
+        return aliasService.findAll();
+    }
+    
+    @RequestMapping(value = "/rest/alias/{id}", method = RequestMethod.GET)
+    public Alias getAliasByStatId(@PathVariable Long id) {
+        return aliasService.findByStat(id);
+    }
+    
     @RequestMapping(value = "/rest/data", method = RequestMethod.POST)
     public String saveJson(@RequestBody JSONObject o) {
         System.out.println(o.toString());

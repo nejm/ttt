@@ -3,6 +3,7 @@ extend = function(rs,attrs){
     for(var i=0;i<rs.length;i++){
         for(var j=0;j<attrs.length;j++){
             if(attrs[j].op == 'sub'){
+                //console.log("sub");
                 var x;
                 if(typeof attrs[j].number == 'undefined'){
                     x = res[i][attrs[j].attribute].length - attrs[j].start;
@@ -11,13 +12,18 @@ extend = function(rs,attrs){
                 }
                 res[i]["SUB_"+attrs[j].attribute] = res[i][attrs[j].attribute].substr(attrs[j].start,x);
             }else if(attrs[j].op == 'stat'){
-                
+                res[i][attrs[j].StatName.toUpperCase()] = attrs[j].StatValue; 
             }else if(attrs[j].op == 'nvl'){
-                
+                //console.log("nvl");
+                if(res[i][attrs[j].nvlName] == null || res[i][attrs[j].nvlName] == '-'){
+                    res[i]["NVL_"+attrs[j].nvlName] = attrs[j].nvlValue;
+                }else{
+                    res[i]["NVL_"+attrs[j].nvlName] = res[i][attrs[j].nvlName];
+                }
             }
         }
     }
-    return rs;
+    return res;
 }
 merge = function (obj1, obj2) {
     var struct = [];

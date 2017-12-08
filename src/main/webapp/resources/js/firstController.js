@@ -752,7 +752,7 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
                     var res = [];
                     if (f.name == 'extend') {
                         a = $scope.stateObjects[$scope.getStateById(f.idd)].extendAttributes;
-                    }else if (f.name == 'where') {
+                    } else if (f.name == 'where') {
                         a = $scope.stateObjects[$scope.getStateById(f.idd)].attributesWhere;
                     } else if (f.name == 'select') {
                         a = $scope.stateObjects[$scope.getStateById(f.idd)].Sattributes;
@@ -836,7 +836,7 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
                 } else if (r.type == 'o') {
                     if (r.name == 'extend') {
                         a = $scope.stateObjects[$scope.getStateById(r.idd)].extendAttributes;
-                    }else if (r.name == 'where') {
+                    } else if (r.name == 'where') {
                         a = $scope.stateObjects[$scope.getStateById(r.idd)].attributesWhere;
                     } else if (r.name == 'select') {
                         a = $scope.stateObjects[$scope.getStateById(r.idd)].Sattributes;
@@ -966,6 +966,8 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
                             data[i] = $scope.flatten(response.data[i]);
                         }
                         //$scope.log = "\n" + $filter('date')(Date.now(), 'hh:mm:ss') + " Load from " + url + " successfully" + $scope.log;
+                        if (typeof $scope.log == 'undefined')
+                            $scope.log = [];
                         $scope.log.push({
                             type: 'success',
                             log: $filter('date')(Date.now(), 'hh:mm:ss') + " Load from " + url + " successfully"
@@ -1098,7 +1100,6 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
             }
         }
         $scope.generateStatistique(t);
-        $scope.debug.query = $scope.query;
         var ress = [];
         for (var i = 0; i < $scope.query.Aoperation.length; i++) {
 
@@ -1267,8 +1268,8 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
             var array = $.map(op.attributes, function (value) {
                 return [value];
             });
-            
-        }else if (op.type === 'where') {
+
+        } else if (op.type === 'where') {
 
             for (var j = 0; j < op.attributes.length; j++) {
                 if (j > 0 && res.length > 0)
@@ -1333,16 +1334,10 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
             });
             var r = union(reslt, reslt2, array, array2, op.union);
             res = r.result;
-            $scope.debug.results.push({
-                union: res
-            });
             $scope.statAttributes = [];
             $scope.statAttributes = r.attributes;
         } else if (typeof op != 'undefined' && op.type !== 'order') {
             res = $scope.executeExpression(op.expression, reslt);
-            $scope.debug.results.push({
-                expression: res
-            });
         }
         if (!a) {
             $scope.statAttributes = $scope.attributes;
@@ -1351,20 +1346,44 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
     };
     $scope.results = {};
     $scope.pieAnyStat = [];
+
+    $scope.getResultAttributes = function (json) {
+        if (json == null)
+            return null;
+        var rs = [];
+        for (var elem in json[0]) {
+            rs.push(elem);
+        }
+
+        return rs;
+    };
+
+    $scope.editAttrs = function () {
+        $scope.openModal("attrs", null, 'sm');
+    }
+
+    $scope.changeAttributesName = function (res, remote) {
+        var rs = [];
+
+        return res;
+    }
+
+    $scope.currentStatId = null;
     $scope.getResult = function (res00, res002, showmodal) {
 
         $scope.cu = 0;
         $scope.query.operation = $scope.query.Aoperation;
         $scope.statAttributes = [];
         var op = {};
+        if ($scope.currentStatId != null) {
+            res = $scope.changeAttributesName(res, false);
+        }
         for (var i = ($scope.query.operation.length - 1); i >= 0; i--) {
             op = $scope.query.operation[i];
             if (op.optype == 's') {
                 var id = op.classes[0].idd;
                 var res = $scope.results['s' + id];
-
-                console.log(res);
-                
+                $scope.resultAttrs = $scope.getResultAttributes(res);
                 if ($scope.query.stat == 'Tableau') {
                     $scope.generateTable(res, $scope.showmodal);
                 } else if ($scope.query.stat == 'Bar') {
@@ -1398,9 +1417,6 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
     $scope.linesStat = [];
     $scope.indexLine = 0;
     $scope.generateLine = function (res, x, y, showmodal) {
-        $scope.debug.results.push({
-            line: res
-        });
         $scope.typeState = "line";
         $scope.labelsLine = [];
         $scope.dataLineInner = [];
@@ -1507,7 +1523,7 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
             jsonToReturn[i].sum = 0;
             jsonToReturn[i].data = {};
             jsonToReturn[i].html = "";
-            
+
             if (type == 1) {
                 jsonToReturn[i].lat = latlong[jsonToReturn[i].iso][0];
                 jsonToReturn[i].long = latlong[jsonToReturn[i].iso][1];
@@ -1553,7 +1569,7 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
                 'size': 'sum',
                 'value': 'sum',
                 'html': 'html',
-                'name' : 'name'
+                'name': 'name'
             });
             map = anychart.map();
             map.choropleth();
@@ -1794,18 +1810,33 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
         $scope.debug.results.push({
             table: res
         });
-        if ($scope.alias.length > 0) {
-            for (var i = 0; i < res.length; i++) {
-                for (var elem in res[i]) {
-                    for (var j = 0; j < $scope.alias.length; j++) {
-                        if ($scope.alias[j].origin == elem) {
-                            res[i][$scope.alias[j].newOne] = res[i][elem];
-                            delete res[i][elem];
-                            break;
-                        }
-                    }
-                }
+//        if ($scope.alias.length > 0) {
+//            for (var i = 0; i < res.length; i++) {
+//                for (var elem in res[i]) {
+//                    for (var j = 0; j < $scope.alias.length; j++) {
+//                        if ($scope.alias[j].origin == elem) {
+//                            res[i][$scope.alias[j].newOne] = res[i][elem];
+//                            delete res[i][elem];
+//                            break;
+//                        }
+//                    }
+//                }
+//            }
+//        }
+        var rs = [];
+        var changed = false;
+        console.log($scope.NewResultAttrs);
+        for (var i = 0; i < res.length; i++) {
+            rs [i] = {};
+            for (var elm in $scope.NewResultAttrs) {
+                changed = true;  
+                rs[i][$scope.NewResultAttrs[elm]] = res[i][elm];
             }
+        }
+
+        console.log(rs[0]);
+        if (changed) {
+            res = rs;
         }
         $scope.statAttributes = [];
         for (var e in res[0]) {
@@ -1913,16 +1944,19 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
         $scope.indexBar++;
     };
     $scope.modals = [];
-    $scope.openModal = function (name, id) {
+    $scope.openModal = function (name, id, sz) {
+        var x;
+
         if (id != 'null') {
             $scope.currentRessource = $scope.getRessource(id);
         }
-
-        $scope.modalInstance = $uibModal.open({
+        var modelInstance = {
             templateUrl: '/Dashboard/resources/partials/' + name + '.html',
-            scope: $scope,
-            size: 'lg'
-        });
+            scope: $scope
+        };
+        if (typeof sz == 'undefined')
+            modelInstance.size = 'lg';
+        $scope.modalInstance = $uibModal.open(modelInstance);
         $scope.modals.push($scope.modalInstance);
     };
     $scope.openModalWithPromess = function (name, id) {
@@ -1945,6 +1979,12 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
             $scope.modalInstance = null;
         }
     };
+
+    $scope.closeSecondModal = function () {
+        var l = $scope.modals.length;
+        $scope.modals[l - 1].close();
+        $scope.modals.pop();
+    }
 
     $scope.removeIndex = function (index, object) {
         object.splice(index, 1);
@@ -2070,13 +2110,14 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
             $scope.stateObjects.push({
                 'realHeight': 0,
                 'expanded': false,
+                'addedAttributes': [],
                 'id': id,
                 'idd': idd,
                 'name': name,
                 'template': type,
                 'attributes': attributes,
                 'vattributes': vattributes,
-                'extendAttributes' : [],
+                'extendAttributes': [],
                 'count': c,
                 'mapType': s.mapType,
                 'type': typ,
@@ -2187,11 +2228,19 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
             $scope.stateObjects[$scope.getStateById(stat.idd)].mapAttributes = array;
         }
     };
-    
-    $scope.extendAttributes = function(stat,attr,index){
-         console.log(attr,':',index);
-    }
-    
+
+    $scope.extendAttributes = function (stat, attr, index) {
+        stat.addedAttributes[index] = attr;
+        stat.vattributes = $scope.getAttr($scope.getBro(stat).vattributes);
+        var nxt = $scope.getNextStat(stat.id);
+        if (nxt != null) {
+            nxt.vattributes = stat.vattributes;
+            for (var i = 0; i < stat.addedAttributes.length; i++) {
+                nxt.vattributes.push(stat.addedAttributes[i]);
+            }
+        }
+    };
+
     $scope.selectAttributes = function (id) {
         var stat = $scope.getNextStat(id);
         if (stat != null)
@@ -2250,22 +2299,19 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
             }});
         var source = $scope.getState($rootScope.connections.source);
         var target = $scope.getState($rootScope.connections.target);
+        $('#b' + target.idd).removeClass('disabled');
 
-        $scope.debug.links.push({
-            source: source,
-            target: target
-        });
-        
-        if (source.name == "extend") {
-            console.log(source.attributes);
-        }
-        
+
         if (source.name == "select") {
             source.attributes = $scope.copyAttribute(source.Sattributes);
         }
 
-        $('#b' + target.idd).removeClass('disabled');
-        if (target.type == 'o') {
+        if (source.name == "extend") {
+            target.vattributes = source.vattributes;
+            for (var i = 0; i < source.addedAttributes.length; i++) {
+                target.vattributes.push(source.addedAttributes[i]);
+            }
+        } else if (target.type == 'o' && source.name != 'extend') {
             $scope.attributes = $scope.copyAttribute(source.attributes);
             target.attributes = $scope.copyAttribute(source.attributes);
             target.vattributes = $scope.copyAttribute(source.attributes);
@@ -2335,7 +2381,9 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
         var t = target;
         var f = false;
         var g = false;
-        if (target.type == 's' && (target.name == 'Bar' || target.name == 'Pie' || target.name == 'Line' || target.name == 'Map')) {
+        if (target.type == 's' &&
+                (target.name == 'Bar' || target.name == 'Pie' ||
+                        target.name == 'Line' || target.name == 'Map')) {
 
             if (source.name == 'join' || source.name == 'union') {
                 var array = source.leftAttributes.map(function (el) {
@@ -2352,7 +2400,8 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
                 target.pieAttributes = array.concat(array2);
                 target.lineAttributes = array.concat(array2);
                 target.mapAttributes = array.concat(array2);
-            } else if (source.name == 'select' || source.name == 'where' || source.name == 'where2') {
+            } else if (source.name == 'select' || source.name == 'where' ||
+                    source.name == 'where2' || source.name == 'extend') {
                 target.barAttributes = $scope.unify($scope.getAttr(source.attributes));
                 target.pieAttributes = $scope.unify($scope.getAttr(source.attributes));
                 target.lineAttributes = $scope.unify($scope.getAttr(source.attributes));
@@ -2376,6 +2425,10 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
             target.pieAttributes = attrs;
             target.lineAttributes = attrs;
             target.mapAttributes = attrs;
+        }
+
+        if (source.name == "order") {
+            target.vattributes = $scope.getAttr(source.vattributes);
         }
     };
 
@@ -2574,6 +2627,19 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
         }
     };
 
+    $scope.NewResultAttrs = {};
+    $scope.newResAtt = {};
+    $scope.setNewResAttr = function () {
+        $scope.NewResultAttrs = {};
+        for (var i = 0; i < $scope.statAttributes.length; i++) {
+            $scope.NewResultAttrs[$scope.statAttributes[i]] = $scope.statAttributes[i];
+        }
+        for (var elm in $scope.newResAtt) {
+            $scope.NewResultAttrs[elm] = $scope.newResAtt[elm];
+        }
+        $scope.closeSecondModal();
+    };
+
     $scope.exporter = function () {
         $scope.statistique.createdBy = $scope.username;
         $scope.statistique.creationDate = Date.now();
@@ -2590,12 +2656,21 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
                 } else {
                     $http.post("/Dashboard/rest/statistique", $scope.statistique).then(function (response) {
                         var newStatId = response.data;
+                        $scope.currentStatId = newStatId;
                         var share = {
                             id_stat: newStatId,
                             users: $scope.users,
                             profiles: $scope.profiles
                         };
                         $http.post("/Dashboard/rest/statistique/partage", share);
+
+                        var alias = {
+                            idStat: newStatId,
+                            name: JSON.stringify($scope.NewResultAttrs)
+                        };
+                        console.log(alias);
+                        if ($scope.NewResultAttrs.length !== {})
+                            $http.post("/Dashboard/rest/alias/save", alias);
                     });
                     $scope.closeModal();
                 }
@@ -2604,6 +2679,10 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
     };
 
     $scope.saveState = function (username) {
+        if ($scope.resultAttrs == null) {
+            sweetAlert("Oops...", "Prière d'exécuter votre statistique", "warning");
+            return;
+        }
         $http.get("/Dashboard/rest/roles").then(function (response) {
             $scope.allProfiles = response.data;
         });

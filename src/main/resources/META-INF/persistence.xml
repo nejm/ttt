@@ -6,6 +6,7 @@
     <class>com.smi.model.Notification</class>
     <class>com.smi.model.CodeVerif</class>
     <class>com.smi.model.Results</class>
+    <class>com.smi.model.Alias</class>
     <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@localhost:1521:XE"/>
