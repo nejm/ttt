@@ -15,9 +15,7 @@ import org.springframework.security.web.authentication.AuthenticationSuccessHand
 
 public class MySimpleUrlAuthenticationSuccessHandler
   implements AuthenticationSuccessHandler {
-  
-    //protected Log logger = LogFactory.getLog(this.getClass());
- 
+   
     private RedirectStrategy redirectStrategy = new DefaultRedirectStrategy();
  
     @Override

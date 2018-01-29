@@ -18,7 +18,7 @@
             </js-plumb-connection>
         </js-plumb-endpoint>
     </div>
-    <div  class="row selectcondition" id="{{state.idd}}" ng-repeat="i in state.count track by $index">
+    <div  class="row selectcondition" id="extend{{i}}" ng-repeat="i in state.count track by $index">
 
         <div id="selectdiv{{state.idd}}p{{$index}}" ng-if="state.attributes[$index].deleted != true">
             <div class="col-sm-3" style="margin-right : -25px">
@@ -26,6 +26,9 @@
                     <option value="stat">STATIC</option>
                     <option value="sub">SUB</option>
                     <option value="nvl">NVL</option>
+                    <option value="lpad">LPAD</option>
+                    <option value="rpad">RPAD</option>
+                    <option value="abs">ABS</option> 
                 </select>
             </div>
             <div class="col-sm-8" style="margin-left: 6px">
@@ -43,12 +46,49 @@
                     </div>
 
                 </div>
+                
+                <div ng-if="state.extendAttributes[$index].op == 'abs'" class="row">
+                    <div class="col-sm-12">
+                        <select name="op" ng-change="extendAttributes(state,'ABS_'+state.extendAttributes[$index].attribute,$index)" id="att0" class="form-control" ng-model="state.extendAttributes[$index].attribute">
+                            <option ng-repeat="att in state.vattributes track by $index" ng-if="att != 'null.null' && att != null">{{att}}</option>
+                        </select>
+                    </div>
+                </div>
+                
                 <div ng-if="state.extendAttributes[$index].op == 'stat'" class="row">
                     <div class="col-sm-6">
                         <input type="text" ng-model="state.extendAttributes[$index].StatName" class="form-control input" style="padding: 6px 6px" ng-change="extendAttributes(state,state.extendAttributes[$index].StatName,$index)">
                     </div>
                     <div class="col-sm-6">
                         <input type="text" ng-model="state.extendAttributes[$index].StatValue" class="form-control input" style="padding: 6px 6px">
+                    </div>
+                </div>
+                
+                <div ng-if="state.extendAttributes[$index].op == 'lpad'" class="row">
+                    <div class="col-sm-7">
+                        <select name="op" ng-change="extendAttributes(state,'LPAD_'+state.extendAttributes[$index].attribute,$index)" id="att0" class="form-control" ng-model="state.extendAttributes[$index].attribute">
+                            <option ng-repeat="att in state.vattributes track by $index" ng-if="att != 'null.null' && att != null">{{att}}</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3" style="margin-left: -15px">
+                        <input type="text" ng-model="state.extendAttributes[$index].lpadchar" class="form-control input" style="padding: 6px 6px">
+                    </div>
+                    <div class="col-sm-3" style="margin-left: -15px">
+                        <input type="text" ng-model="state.extendAttributes[$index].lpadnumber" class="form-control input" style="padding: 6px 6px">
+                    </div>
+                </div>
+                
+                <div ng-if="state.extendAttributes[$index].op == 'rpad'" class="row">
+                    <div class="col-sm-7">
+                        <select name="op" ng-change="extendAttributes(state,'RPAD_'+state.extendAttributes[$index].attribute,$index)" id="att0" class="form-control" ng-model="state.extendAttributes[$index].attribute">
+                            <option ng-repeat="att in state.vattributes track by $index" ng-if="att != 'null.null' && att != null">{{att}}</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3" style="margin-left: -15px">
+                        <input type="text" ng-model="state.extendAttributes[$index].rpadchar" class="form-control input" style="padding: 6px 6px">
+                    </div>
+                    <div class="col-sm-3" style="margin-left: -15px">
+                        <input type="text" ng-model="state.extendAttributes[$index].rpadnumber" class="form-control input" style="padding: 6px 6px">
                     </div>
                 </div>
                 
@@ -68,7 +108,7 @@
             </div>
 
             <div class="col-sm-1 pull-right" style="margin-right: 6px">
-                <button class="btn btn-default"  id="db{{state.idd}}p{{$index}}}" ng-click = "removecond(state.idd, $index, 'select')" style="margin-left : -25px">
+                <button class="btn btn-default"  id="db{{state.idd}}p{{$index}}}" ng-click = "removecond(state.idd, $index, 'extend')" style="margin-left : -25px">
                     <span class="glyphicon glyphicon-minus" ></span>
                 </button>
             </div>

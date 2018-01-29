@@ -10,19 +10,15 @@
     <global-method-security />
     <debug/>
     
-    <beans:bean id="myAuthenticationSuccessHandler"
-        class="com.smi.config.MySimpleUrlAuthenticationSuccessHandler" />
-    <beans:bean id="myBasicAuthenticationEntryPoint" class="com.smi.config.MyBasicAuthenticationEntryPoint" />
     <http  auto-config="true" use-expressions="true">
         <intercept-url pattern="/home*" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"/>
         <intercept-url pattern="/new**" access="hasRole('ROLE_ADMIN')"/>
         <intercept-url pattern="/edit/**" access="hasRole('ROLE_ADMIN')"/>
         <intercept-url pattern="/statistiques/**" access="hasRole('ROLE_ADMIN')"/>
         <intercept-url pattern="/dashboard/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"/>
-        <intercept-url pattern="/dashboard/myHandler" access="permitAll"/>
         <intercept-url pattern="/create/**" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')"/>
         
-        <http-basic entry-point-ref="myBasicAuthenticationEntryPoint"/>
+        <http-basic/>
         <form-login 
             login-page="/login" 
             login-processing-url="/j_spring_security_check"

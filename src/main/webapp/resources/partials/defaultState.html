@@ -1,13 +1,5 @@
-<style>
-    div.tooltip-inner{
-        font-size: 25px; 
-    }
-    .tooltip{
-        margin-top: 16px;
-    }
-</style>
-<div>
 
+<div>
     <js-plumb-object state-object="state" ng-style="{ 'left':state.x, 'top':state.y }" class="state_window" ng-mouseenter="setActiveState(state)">
         <button class="btn btn-default pull-left" ng-click="removeState(state)">
             <i class="fa fa-trash"></i>
@@ -27,7 +19,11 @@
         <div id="state">
             <div id="s{{state.idd}}" style="overflow: hidden">
                 <div id="{{state.idd}}" ng-repeat="att in state.attributes track by $index" ng-if="$index < state.attributesL">
-                    <h4 style="text-align : left; padding-left : 10px" data-placement="left" data-toggle="tooltip" title="{{aliases[att]}}">{{att}}</h4>
+                    <div data-toggle="tooltip" data-placement="left" title="{{aliases[att]}}">
+                        <h4 style="text-align : left; padding-left : 10px">
+                            {{att}}
+                        </h4>
+                    </div>
 
 
                 </div>
@@ -37,7 +33,9 @@
     </js-plumb-object>
 </div>
 <script>
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip({
+            template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner large"></div></div>'
+        });
     });
 </script>

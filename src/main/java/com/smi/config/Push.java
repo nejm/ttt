@@ -1,8 +1,6 @@
 package com.smi.config;
 
 import java.io.IOException;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 import javax.websocket.OnClose;

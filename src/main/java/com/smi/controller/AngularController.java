@@ -172,8 +172,10 @@ public class AngularController {
 
     @RequestMapping(value = "/rest/statistique/partage", method = RequestMethod.POST)
     public void partage(@RequestBody JSONObject o) {
-        List<HashMap<String, String>> roles = (List<HashMap<String, String>>) o.get("profiles");
-        List<HashMap<String, String>> users = (List<HashMap<String, String>>) o.get("users");
+        @SuppressWarnings("unchecked")
+		List<HashMap<String, String>> roles = (List<HashMap<String, String>>) o.get("profiles");
+        @SuppressWarnings("unchecked")
+		List<HashMap<String, String>> users = (List<HashMap<String, String>>) o.get("users");
         Statuser statuser = new Statuser();
         statuser.setIdStat(Long.parseLong(o.get("id_stat").toString()));
         for (HashMap<String, String> s : roles) {
@@ -300,7 +302,6 @@ public class AngularController {
                 return list;
             }
         }
-        list.add("blallalalalalalalalalalalalal");
         return list;
     }
 
@@ -448,5 +449,4 @@ public class AngularController {
         g.put("rols", roleService.findAll().size());
         return g;
     }
-
 }

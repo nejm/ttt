@@ -1,16 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      ng-app="myApp">
-    <head>
+<html ng-app="myApp">
+
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <!-- Meta, title, CSS, favicons, etc. -->
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <title>Dashboard</title>
+        <title>Statistiques</title>
 
         <!-- Bootstrap -->
         <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -38,7 +35,6 @@
             #sortable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
             #sortable li { margin: 3px 3px 3px 0; padding: 1px; float: left; width: 24%; height: 250px;}
         </style>
-    </head>
 
     <body class="nav-md" ng-controller="searchController" ng-init="initStats('#{user}')" style="overflow-x : hidden">
         <div class="container body">

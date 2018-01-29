@@ -1,9 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      ng-app="myApp">
-    <head>
+<html ng-app="myApp">
+
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <!-- Meta, title, CSS, favicons, etc. -->
         <meta charset="utf-8" />
@@ -40,8 +37,6 @@
                 $("#sideMenu").load("/Dashboard/resources/partials/sideAdmin.html");
             });
         </script>
-    </head>
-
     <body class="nav-md" ng-controller="userController" ng-init="init('#{user}')">
         <div class="container body">
             <div class="main_container">

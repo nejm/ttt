@@ -1,6 +1,5 @@
 package com.smi.service;
 
-import com.smi.controller.AngularController;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -11,8 +10,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.TimeZone;
-import java.util.logging.Level;
 import oracle.jdbc.OracleConnection;
 import oracle.jdbc.pool.OracleDataSource;
 import org.apache.log4j.Logger;
@@ -41,7 +38,7 @@ public class TableHelper {
 
     public boolean testConnection() throws SQLException {
 
-        Connection ocon = DriverManager.getConnection("jdbc:oracle:thin:@"+serverName+":"+portNumber+":"+databaseName,username,password);
+        Connection ocon = DriverManager.getConnection("jdbc:oracle:thin:@" + serverName + ":" + portNumber + ":" + databaseName, username, password);
         return ocon.isValid(5);
     }
 
@@ -59,18 +56,23 @@ public class TableHelper {
         System.out.println(serverName + ":" + username + ":" + password + ":" + databaseName + ":" + portNumber + ":" + driverType);
 
         OracleConnection ocon = (OracleConnection) dataSource.getConnection();
-        ocon.setAutoCommit(false);
         Statement stmt = ocon.createStatement();
+        ocon.setAutoCommit(false);
+        try {
+            ResultSet rset = stmt.executeQuery("select * from " + tableName);
+            ResultSetMetaData rsmd = rset.getMetaData();
+            int columnsNumber = rsmd.getColumnCount();
+            for (int i = 1; i <= columnsNumber; i++) {
+                list.add(rsmd.getColumnName(i));
+            }
 
-        ResultSet rset = stmt.executeQuery("select * from " + tableName);
-        ResultSetMetaData rsmd = rset.getMetaData();
-        int columnsNumber = rsmd.getColumnCount();
-        for (int i = 1; i <= columnsNumber; i++) {
-            list.add(rsmd.getColumnName(i));
+            ocon.close();
+            return list;
+        } catch (SQLException e) {
+            return new ArrayList();
+        } finally {
+            stmt.close();
         }
-
-        ocon.close();
-        return list;
     }
 
     public List<String> getAllResultNamesMySql() throws SQLException, ClassNotFoundException {

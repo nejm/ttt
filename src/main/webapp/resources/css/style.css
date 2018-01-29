@@ -152,6 +152,10 @@ hr {
     } 
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
 @keyframes sk-foldCubeAngle {
     0%, 10% {
         -webkit-transform: perspective(140px) rotateX(-180deg);

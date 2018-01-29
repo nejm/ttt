@@ -22,9 +22,11 @@ public class HelloController {
     StatistiqueService statistiqueService;
     
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = {"","/"}, method = RequestMethod.GET)
     public ModelAndView welcomePage(Principal principal) {
-        ModelAndView model = new ModelAndView();
+        if(principal != null)
+            return new ModelAndView("redirect:/home");
+        ModelAndView model = new ModelAndView(); 
         model.setViewName("login");
         return model;
     }
@@ -130,10 +132,6 @@ public class HelloController {
             @RequestParam(value = "logout", required = false) String logout, Principal principal, HttpServletResponse response) {
 
         ModelAndView model = new ModelAndView();
-        //if(principal != null) 
-
-//        Cookie c = new Cookie("nejm", "hhhhhhhhhhhhhhh");
-//        response.addCookie(c);
 
         if (error != null) {
             model.addObject("error", "Invalid username and password!");

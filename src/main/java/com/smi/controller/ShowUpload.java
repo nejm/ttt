@@ -54,24 +54,4 @@ public class ShowUpload {
         File file = new File(name);
         return new FileSystemResource(file);
     }
-
-    private List<Clob> getAllResult() throws SQLException {
-        OracleDataSource dataSource = new OracleDataSource();
-        List<Clob> list = new ArrayList<>();
-        dataSource.setServerName("127.0.0.1");
-        dataSource.setUser("system");
-        dataSource.setPassword("eddine1992");
-        dataSource.setDatabaseName("XE");
-        dataSource.setPortNumber(1521);
-        dataSource.setDriverType("thin");
-
-        OracleConnection ocon = (OracleConnection) dataSource.getConnection();
-        Statement stmt = ocon.createStatement();
-        ResultSet rset = stmt.executeQuery("select * from test.files");
-        while (rset.next()) {
-            list.add(rset.getClob("name"));
-        }
-        ocon.close();
-        return list;
-    }
 }

@@ -8,14 +8,13 @@ package com.smi.config;
 import java.io.IOException;
 import javax.websocket.OnClose;
 import javax.websocket.OnMessage;
-import javax.websocket.OnOpen;
 import javax.websocket.Session;
 import javax.websocket.server.ServerEndpoint;
 
 @ServerEndpoint("/chat")
 public class Chat {
     
-    private Session mySession;
+//    private Session mySession;
     
     @OnMessage
     public void onMessage(String message,Session session) throws IOException,
@@ -24,10 +23,10 @@ public class Chat {
        
     }
 
-    @OnOpen
-    public void onOpen(Session session) {
-        mySession = session;
-    }
+//    @OnOpen
+//    public void onOpen(Session session) {
+//        mySession = session;
+//    }
 
     @OnClose
     public void onClose(Session session) {

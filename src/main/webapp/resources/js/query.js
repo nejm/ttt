@@ -1,5 +1,6 @@
 extend = function(rs,attrs){
     var res = rs;
+    console.log(attrs);
     for(var i=0;i<rs.length;i++){
         for(var j=0;j<attrs.length;j++){
             if(attrs[j].op == 'sub'){
@@ -20,6 +21,18 @@ extend = function(rs,attrs){
                 }else{
                     res[i]["NVL_"+attrs[j].nvlName] = res[i][attrs[j].nvlName];
                 }
+            }else if(attrs[j].op =='lpad'){
+               var s = Array(attrs[j].lpadnumber).join(attrs[j].lpadchar);
+               console.log(s);
+               res[i]["L_"+attrs[j].attribute] = s + res[i][attrs[j].attribute];
+                
+            }else if(attrs[j].op =='rpad'){
+               var s = Array(attrs[j].rpadnumber).join(attrs[j].rpadchar);
+               console.log(s);
+               res[i]["R_"+attrs[j].attribute] = res[i][attrs[j].attribute]+s;
+            }else if(attrs[j].op =='abs'){
+                
+                res[i]["ABS_"+attrs[j].attribute] = Math.abs(res[i][attrs[j].attribute]);
             }
         }
     }
