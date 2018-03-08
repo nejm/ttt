@@ -1,0 +1,343 @@
+“
+
+javascriptS3403JRemove this "!==" check; it will always be true. Did you mean to use "!="? 2
+ÉÉ  :
+Á
+ÉÉ :
+Á
+ÉÉ! %²
+
+javascriptS2583mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed. 2
+†† ): 
+Á
+†‹+ Never reached²
+
+javascriptS2583mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed. 2
+«	«	 : 
+Á
+«	³	 Never reachedy
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 934. 2
+°° :
+Á
+¦¦ 
+
+javascriptS2814IRename "array2" as this name is already used in declaration at line 2061. 2
+—— :
+Á
+ 
+
+javascriptS2814IRename "array2" as this name is already used in declaration at line 2061. 2
+×× :
+Á
+ z
+
+javascriptS2814DRename "i" as this name is already used in declaration at line 1042. 2
+œœ :
+Á
+’’ z
+
+javascriptS2814DRename "i" as this name is already used in declaration at line 2650. 2
+ææ :
+Á
+ÚÚ z
+
+javascriptS2814DRename "i" as this name is already used in declaration at line 1367. 2
+ã
+ã
+ :
+Á
+×
+×
+ 
+
+javascriptS2814IRename "array2" as this name is already used in declaration at line 1181. 2
+ò	ò	 :
+Á
+		 |
+
+javascriptS2814FRename "res" as this name is already used in declaration at line 1286. 2
+•
+•
+ :
+Á
+†
+†
+! ${
+
+javascriptS2814ERename "res" as this name is already used in declaration at line 722. 2
+‰‰ :
+Á
+ÒÒ 
+
+javascriptS2814IRename "images" as this name is already used in declaration at line 1445. 2
+àà :
+Á
+¥¥ y
+
+javascriptS2814CRename "p" as this name is already used in declaration at line 997. 2
+îî :
+Á
+åå {
+
+javascriptS2814ERename "p2" as this name is already used in declaration at line 2799. 2
+ññ :
+Á
+ïï {
+
+javascriptS2814ERename "p2" as this name is already used in declaration at line 2799. 2
+øø :
+Á
+ïï {
+
+javascriptS2814ERename "p2" as this name is already used in declaration at line 2799. 2
+úú :
+Á
+ïï z
+
+javascriptS2814DRename "j" as this name is already used in declaration at line 1197. 2
+·	·	 :
+Á
+­	­	 z
+
+javascriptS2814DRename "j" as this name is already used in declaration at line 1197. 2
+Æ	Æ	 :
+Á
+­	­	 |
+
+javascriptS2814FRename "elem" as this name is already used in declaration at line 972. 2
+×× :
+Á
+ÌÌ y
+
+javascriptS2814CRename "b" as this name is already used in declaration at line 721. 2
+ˆˆ :
+Á
+ÑÑ  !z
+
+javascriptS2814DRename "e" as this name is already used in declaration at line 1587. 2
+ÄÄ :
+Á
+³³ y
+
+javascriptS2814CRename "c" as this name is already used in declaration at line 721. 2
+ˆˆ$ %:
+Á
+ÑÑ( )y
+
+javascriptS2814CRename "d" as this name is already used in declaration at line 721. 2
+ˆˆ, -:
+Á
+ÑÑ0 1{
+
+javascriptS2814ERename "id" as this name is already used in declaration at line 1300. 2
+¢
+¢
+ :
+Á
+”
+”
+ ~
+
+javascriptS2814HRename "array" as this name is already used in declaration at line 1178. 2
+¨	¨	 :
+Á
+š	š	 ~
+
+javascriptS2814HRename "array" as this name is already used in declaration at line 1178. 2
+î	î	 :
+Á
+š	š	 z
+
+javascriptS2814DRename "i" as this name is already used in declaration at line 1070. 2
+¸¸ :
+Á
+®® y
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 680. 2
+¶¶ :
+Á
+¨¨ z
+
+javascriptS2814DRename "p" as this name is already used in declaration at line 2796. 2
+õõ :
+Á
+ìì y
+
+javascriptS2814CRename "x" as this name is already used in declaration at line 754. 2
+ŒŒ :
+Á
+òò {
+
+javascriptS2814ERename "p2" as this name is already used in declaration at line 1000. 2
+êê :
+Á
+èè {
+
+javascriptS2814ERename "p2" as this name is already used in declaration at line 1000. 2
+ññ :
+Á
+èè {
+
+javascriptS2814ERename "p2" as this name is already used in declaration at line 1000. 2
+óó :
+Á
+èè y
+
+javascriptS2814CRename "a" as this name is already used in declaration at line 721. 2
+ˆˆ :
+Á
+ÑÑ z
+
+javascriptS2814DRename "i" as this name is already used in declaration at line 1421. 2
+·· :
+Á
+ }
+
+javascriptS2814GRename "elem" as this name is already used in declaration at line 2775. 2
+áá :
+Á
+×× ~
+
+javascriptS2814HRename "array" as this name is already used in declaration at line 2017. 2
+ŠŠ :
+Á
+áá ~
+
+javascriptS2814HRename "array" as this name is already used in declaration at line 2017. 2
+”” :
+Á
+áá ~
+
+javascriptS2814HRename "array" as this name is already used in declaration at line 2017. 2
+ÒÒ :
+Á
+áá }
+
+javascriptS2814GRename "elem" as this name is already used in declaration at line 1423. 2
+¦¦ :
+Á
+ z
+
+javascriptS2814DRename "i" as this name is already used in declaration at line 1573. 2
+ÌÌ :
+Á
+¥¥ k
+
+javascriptEvalIReview the arguments of this "eval" call to make sure they are validated. 2
+ºº #k
+
+javascriptEvalIReview the arguments of this "eval" call to make sure they are validated. 2
+šš& *a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'data' variable. 2
+ÎÎ$ (h
+
+javascriptUnusedVariable<Remove the declaration of the unused 'attributes2' variable. 2
+üü5 @a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'data' variable. 2
+ÔÔ  $`
+
+javascriptUnusedVariable4Remove the declaration of the unused 'res' variable. 2
+ÒÒ `
+
+javascriptUnusedVariable4Remove the declaration of the unused 'res' variable. 2
+‰‰ ^
+
+javascriptUnusedVariable2Remove the declaration of the unused 't' variable. 2
+ÌÌ `
+
+javascriptUnusedVariable4Remove the declaration of the unused 'obj' variable. 2
+¶¶ b
+
+javascriptUnusedVariable6Remove the declaration of the unused 'chart' variable. 2
+ë
+ë
+ ^
+
+javascriptUnusedVariable2Remove the declaration of the unused 'g' variable. 2
+ÎÎ ^
+
+javascriptUnusedVariable2Remove the declaration of the unused 'f' variable. 2
+ÍÍ ^
+
+javascriptUnusedVariable2Remove the declaration of the unused 'o' variable. 2
+Ø
+Ø
+ c
+
+javascriptUnusedVariable7Remove the declaration of the unused 'joined' variable. 2
+
+
+ ^
+
+javascriptUnusedVariable2Remove the declaration of the unused 'i' variable. 2
+ĞĞ ^
+
+javascriptUnusedVariable2Remove the declaration of the unused 'j' variable. 2
+şş c
+
+javascriptUnusedVariable7Remove the declaration of the unused 'typeSt' variable. 2
+‰‰ ^
+
+javascriptUnusedVariable2Remove the declaration of the unused 'a' variable. 2
+Œ
+Œ
+ _
+
+javascriptUnusedVariable3Remove the declaration of the unused 'p2' variable. 2
+›› W
+
+javascriptS18544Remove this useless assignment to local variable "r" 2
+ÃÃ X
+
+javascriptS18545Remove this useless assignment to local variable "dd" 2
+ğğ X
+
+javascriptS18545Remove this useless assignment to local variable "dd" 2
+øø Y
+
+javascriptS18546Remove this useless assignment to local variable "res" 2
+‰	‰	 \
+
+javascriptS18549Remove this useless assignment to local variable "joined" 2
+ˆ	ˆ	 ]
+
+javascriptS1854:Remove this useless assignment to local variable "prefix2" 2
+ç	ç	 #Z
+
+javascriptS18547Remove this useless assignment to local variable "res2" 2
+‘	‘	 ]
+
+javascriptS1854:Remove this useless assignment to local variable "prefix1" 2
+×	×	 [
+
+javascriptS18548Remove this useless assignment to local variable "chart" 2
+ë
+ë
+ Z
+
+javascriptS18547Remove this useless assignment to local variable "data" 2
+ÔÔ  $W
+
+javascriptS18544Remove this useless assignment to local variable "t" 2
+ÌÌ Y
+
+javascriptS18546Remove this useless assignment to local variable "obj" 2
+¶¶ X
+
+javascriptS18545Remove this useless assignment to local variable "p2" 2
+›› Z
+
+javascriptS18547Remove this useless assignment to local variable "data" 2
+ÎÎ$ (€
+
+javascriptS2703]Add the "let", "const" or "var" keyword to this declaration of "service" to make it explicit. 2
+  }
+
+javascriptS2703ZAdd the "let", "const" or "var" keyword to this declaration of "tick" to make it explicit. 2
+œœ z
+
+javascriptS2703WAdd the "let", "const" or "var" keyword to this declaration of "i" to make it explicit. 2
+ 

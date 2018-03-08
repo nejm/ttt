@@ -1,0 +1,8 @@
+®
+
+javascriptS2583mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed. 299 ):
+¨9>+ Never reached\
+
+javascriptUnusedVariable2Remove the declaration of the unused 'q' variable. 2   U
+
+javascriptS18544Remove this useless assignment to local variable "q" 2   

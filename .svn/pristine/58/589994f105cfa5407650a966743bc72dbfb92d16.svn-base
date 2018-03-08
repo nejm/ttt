@@ -1,0 +1,22 @@
+t
+
+javascriptS2814BRename "e" as this name is already used in declaration at line 43. 2// :
+ð++ g
+
+javascriptUnusedVariable=Remove the declaration of the unused 'menuPosition' variable. 2[[ s
+
+javascriptUnusedVariableIRemove the declaration of the unused 'contextMenuItemClassName' variable. 2KK o
+
+javascriptUnusedVariableERemove the declaration of the unused 'contextMenuClassName' variable. 2JJ h
+
+javascriptUnusedVariable>Remove the declaration of the unused 'menuPositionX' variable. 2\\ h
+
+javascriptUnusedVariable>Remove the declaration of the unused 'menuPositionY' variable. 2]] d
+
+javascriptUnusedVariable:Remove the declaration of the unused 'menuItems' variable. 2WW l
+
+javascriptS1854KRemove this useless assignment to local variable "contextMenuItemClassName" 2KK h
+
+javascriptS1854GRemove this useless assignment to local variable "contextMenuClassName" 2JJ ]
+
+javascriptS1854<Remove this useless assignment to local variable "menuItems" 2WW 

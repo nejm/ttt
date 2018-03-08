@@ -1,0 +1,28 @@
+±
+
+javascriptS2583lChange this condition so that it does not always evaluate to "true"; some subsequent code is never executed. 2
+ÏUÏU : 
+ù
+ÏUÏU  Never reachedQ
+
+javascript
+EmptyBlock)Either remove or fill this block of code. 2
+’A’A@ B^
+
+javascriptS1854;Remove this useless assignment to local variable "otherVal" 2
+ù[ù[ ]
+
+javascriptParentheses!Remove those useless parentheses. 2
+∂∂ :
+ù
+∫∫P Q]
+
+javascriptParentheses!Remove those useless parentheses. 2
+‘f‘f :
+ù
+‘f‘fw x]
+
+javascriptParentheses!Remove those useless parentheses. 2
+€f€f :
+ù
+€f€fu v

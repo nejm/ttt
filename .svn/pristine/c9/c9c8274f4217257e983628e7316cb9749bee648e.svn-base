@@ -1,0 +1,697 @@
+b
+
+javascriptS2259?TypeError can be thrown as "g" might be null or undefined here. 2
+¶¶  b
+
+javascriptS2259?TypeError can be thrown as "b" might be null or undefined here. 2
+ÔÔ b
+
+javascriptS2259?TypeError can be thrown as "p" might be null or undefined here. 2
+ê!ê!F GL
+
+javascriptS2201)The return value of "isNaN" must be used. 2
+Í
+Í
+ &”
+
+javascriptS3403KRemove this "===" check; it will always be false. Did you mean to use "=="? 2
+úúb e:
+ 
+úú` a:
+ 
+úúf g²
+
+javascriptS2583mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed. 2
+úú` g: 
+ 
+úúk vNever reachedz
+
+javascriptS2814DRename "a" as this name is already used in declaration at line 4550. 2
+Ô#Ô# :
+ 
+Æ#Æ# z
+
+javascriptS2814DRename "a" as this name is already used in declaration at line 4257. 2
+£!£! :
+ 
+¡!¡! z
+
+javascriptS2814DRename "k" as this name is already used in declaration at line 3502. 2
+¿¿  !:
+ 
+®® z
+
+javascriptS2814DRename "k" as this name is already used in declaration at line 3502. 2
+ÀÀ  !:
+ 
+®® z
+
+javascriptS2814DRename "L" as this name is already used in declaration at line 5679. 2
+»,»,$ %:
+ 
+¯,¯,  !z
+
+javascriptS2814DRename "m" as this name is already used in declaration at line 6167. 2
+¤0¤0 :
+ 
+—0—0 z
+
+javascriptS2814DRename "f" as this name is already used in declaration at line 3013. 2
+ÏÏ :
+ 
+ÅÅ z
+
+javascriptS2814DRename "f" as this name is already used in declaration at line 3691. 2
+ğğ :
+ 
+ëë y
+
+javascriptS2814CRename "l" as this name is already used in declaration at line 418. 2
+¨¨ :
+ 
+¢¢ z
+
+javascriptS2814DRename "J" as this name is already used in declaration at line 5678. 2
+¹,¹,$ %:
+ 
+®,®,  !z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 4497. 2
+’#’# :
+ 
+‘#‘# z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 4497. 2
+“#“# :
+ 
+‘#‘# z
+
+javascriptS2814DRename "h" as this name is already used in declaration at line 3495. 2
+ÁÁ  !:
+ 
+§§ z
+
+javascriptS2814DRename "e" as this name is already used in declaration at line 4027. 2
+ÃÃ :
+ 
+»» z
+
+javascriptS2814DRename "y" as this name is already used in declaration at line 6173. 2
+Ÿ0Ÿ0 :
+ 
+00 z
+
+javascriptS2814DRename "y" as this name is already used in declaration at line 6173. 2
+§0§0 :
+ 
+00 z
+
+javascriptS2814DRename "n" as this name is already used in declaration at line 2205. 2
+ªª :
+ 
+ z
+
+javascriptS2814DRename "l" as this name is already used in declaration at line 4648. 2
+¬$¬$ :
+ 
+¨$¨$ z
+
+javascriptS2814DRename "d" as this name is already used in declaration at line 5030. 2
+ª'ª' :
+ 
+¦'¦' z
+
+javascriptS2814DRename "d" as this name is already used in declaration at line 4502. 2
+˜#˜# :
+ 
+–#–# z
+
+javascriptS2814DRename "q" as this name is already used in declaration at line 3516. 2
+ÂÂ  !:
+ 
+¼¼ z
+
+javascriptS2814DRename "q" as this name is already used in declaration at line 3516. 2
+ÆÆ  !:
+ 
+¼¼ z
+
+javascriptS2814DRename "x" as this name is already used in declaration at line 4743. 2
+%% :
+ 
+‡%‡% z
+
+javascriptS2814DRename "k" as this name is already used in declaration at line 4647. 2
+¯$¯$ :
+ 
+§$§$ z
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 3615. 2
+££ :
+ 
+ŸŸ z
+
+javascriptS2814DRename "k" as this name is already used in declaration at line 6165. 2
+£0£0 :
+ 
+•0•0 z
+
+javascriptS2814DRename "f" as this name is already used in declaration at line 1349. 2
+Æ
+Æ
+ :
+ 
+Å
+Å
+ z
+
+javascriptS2814DRename "h" as this name is already used in declaration at line 4646. 2
+®$®$ :
+ 
+¦$¦$ z
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 3645. 2
+ÒÒ :
+ 
+½½ z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 1676. 2
+ :
+ 
+ŒŒ z
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 2034. 2
+úú :
+ 
+òò z
+
+javascriptS2814DRename "h" as this name is already used in declaration at line 6164. 2
+¥0¥0 :
+ 
+”0”0 z
+
+javascriptS2814DRename "r" as this name is already used in declaration at line 3515. 2
+ÄÄ  !:
+ 
+»» z
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 5029. 2
+©'©' :
+ 
+¥'¥' z
+
+javascriptS2814DRename "l" as this name is already used in declaration at line 2583. 2
+˜˜a b:
+ 
+——A Bz
+
+javascriptS2814DRename "a" as this name is already used in declaration at line 4348. 2
+ÿ!ÿ! :
+ 
+ü!ü! z
+
+javascriptS2814DRename "f" as this name is already used in declaration at line 3741. 2
+ŸŸ :
+ 
+ z
+
+javascriptS2814DRename "k" as this name is already used in declaration at line 4524. 2
+­#­# :
+ 
+¬#¬# z
+
+javascriptS2814DRename "k" as this name is already used in declaration at line 4524. 2
+¯#¯# :
+ 
+¬#¬# z
+
+javascriptS2814DRename "d" as this name is already used in declaration at line 3970. 2
+‡‡  !:
+ 
+‚‚ z
+
+javascriptS2814DRename "e" as this name is already used in declaration at line 3652. 2
+ÍÍ :
+ 
+ÄÄ z
+
+javascriptS2814DRename "F" as this name is already used in declaration at line 2228. 2
+¿¿ :
+ 
+´´ z
+
+javascriptS2814DRename "k" as this name is already used in declaration at line 4935. 2
+Ì&Ì& :
+ 
+Ç&Ç& z
+
+javascriptS2814DRename "u" as this name is already used in declaration at line 2634. 2
+ÎÎ :
+ 
+ÊÊ z
+
+javascriptS2814DRename "m" as this name is already used in declaration at line 2204. 2
+ĞĞ :
+ 
+œœ z
+
+javascriptS2814DRename "h" as this name is already used in declaration at line 2081. 2
+¤¤ :
+ 
+¡¡ z
+
+javascriptS2814DRename "e" as this name is already used in declaration at line 4553. 2
+Ò#Ò# :
+ 
+É#É# z
+
+javascriptS2814DRename "a" as this name is already used in declaration at line 1526. 2
+ÿÿ :
+ 
+öö z
+
+javascriptS2814DRename "t" as this name is already used in declaration at line 2594. 2
+¢¢h i:
+ 
+¢¢ z
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 1615. 2
+ØØ :
+ 
+ÏÏ z
+
+javascriptS2814DRename "l" as this name is already used in declaration at line 4559. 2
+Ö#Ö# :
+ 
+Ï#Ï# z
+
+javascriptS2814DRename "g" as this name is already used in declaration at line 3692. 2
+ññ :
+ 
+ìì z
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 4626. 2
+”$”$ :
+ 
+’$’$ z
+
+javascriptS2814DRename "k" as this name is already used in declaration at line 3713. 2
+…… :
+ 
+ z
+
+javascriptS2814DRename "g" as this name is already used in declaration at line 5002. 2
+‘'‘' :
+ 
+Š'Š' z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 4349. 2
+ş!ş! :
+ 
+ı!ı! z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 4349. 2
+“"“" :
+ 
+ı!ı! z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 4349. 2
+”"”" :
+ 
+ı!ı! z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 4349. 2
+•"•" :
+ 
+ı!ı! z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 4349. 2
+–"–" :
+ 
+ı!ı! z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 4349. 2
+—"—" :
+ 
+ı!ı! z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 4349. 2
+˜"˜" :
+ 
+ı!ı! z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 4349. 2
+™"™" :
+ 
+ı!ı! z
+
+javascriptS2814DRename "a" as this name is already used in declaration at line 4265. 2
+¬!¬! :
+ 
+©!©! z
+
+javascriptS2814DRename "e" as this name is already used in declaration at line 1693. 2
+££ :
+ 
+ z
+
+javascriptS2814DRename "h" as this name is already used in declaration at line 4506. 2
+›#›#  !:
+ 
+š#š#  !z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 3454. 2
+ :
+ 
+şş z
+
+javascriptS2814DRename "A" as this name is already used in declaration at line 2831. 2
+”” :
+ 
+ z
+
+javascriptS2814DRename "l" as this name is already used in declaration at line 3503. 2
+ÃÃ  !:
+ 
+¯¯ z
+
+javascriptS2814DRename "l" as this name is already used in declaration at line 3503. 2
+ÇÇ  !:
+ 
+¯¯ z
+
+javascriptS2814DRename "g" as this name is already used in declaration at line 1160. 2
+Š	Š	 :
+ 
+ˆ	ˆ	 z
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 4635. 2
+$$ :
+ 
+›$›$ z
+
+javascriptS2814DRename "P" as this name is already used in declaration at line 5687. 2
+º,º,$ %:
+ 
+·,·,$ %z
+
+javascriptS2814DRename "A" as this name is already used in declaration at line 6178. 2
+¦0¦0 :
+ 
+¢0¢0 z
+
+javascriptS2814DRename "m" as this name is already used in declaration at line 2583. 2
+˜˜r s:
+ 
+——S Tz
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 4026. 2
+ÁÁ :
+ 
+ºº z
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 4026. 2
+ÂÂ :
+ 
+ºº z
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 1561. 2
+›› :
+ 
+™™ z
+
+javascriptS2814DRename "w" as this name is already used in declaration at line 2637. 2
+ÕÕ :
+ 
+ÍÍ z
+
+javascriptS2814DRename "K" as this name is already used in declaration at line 5677. 2
+¸,¸,$ %:
+ 
+­,­,  !z
+
+javascriptS2814DRename "h" as this name is already used in declaration at line 4523. 2
+®#®# :
+ 
+«#«# z
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 3379. 2
+»» :
+ 
+³³ z
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 4097. 2
+… …  :
+ 
+   z
+
+javascriptS2814DRename "d" as this name is already used in declaration at line 5455. 2
+Õ*Õ* :
+ 
+Ï*Ï* z
+
+javascriptS2814DRename "k" as this name is already used in declaration at line 2085. 2
+¸¸ :
+ 
+¥¥ z
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 6160. 2
+¨0¨0 :
+ 
+00 z
+
+javascriptS2814DRename "g" as this name is already used in declaration at line 4726. 2
+%% :
+ 
+ö$ö$ z
+
+javascriptS2814DRename "h" as this name is already used in declaration at line 4556. 2
+Ó#Ó# :
+ 
+Ì#Ì# z
+
+javascriptS2814DRename "n" as this name is already used in declaration at line 6086. 2
+É/É/ :
+ 
+Æ/Æ/ z
+
+javascriptS2814DRename "a" as this name is already used in declaration at line 2070. 2
+ :
+ 
+–– z
+
+javascriptS2814DRename "a" as this name is already used in declaration at line 2070. 2
+¹¹ :
+ 
+–– z
+
+javascriptS2814DRename "e" as this name is already used in declaration at line 6161. 2
+©0©0 :
+ 
+‘0‘0 z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 1559. 2
+šš :
+ 
+—— z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 1559. 2
+œœ :
+ 
+—— z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 3378. 2
+¸¸ :
+ 
+²² z
+
+javascriptS2814DRename "l" as this name is already used in declaration at line 2086. 2
+ºº :
+ 
+¦¦ z
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 1529. 2
+şş :
+ 
+ùù z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 4551. 2
+Õ#Õ# :
+ 
+Ç#Ç# z
+
+javascriptS2814DRename "a" as this name is already used in declaration at line 2311. 2
+’’  !:
+ 
+‡‡ z
+
+javascriptS2814DRename "f" as this name is already used in declaration at line 3683. 2
+çç :
+ 
+ãã z
+
+javascriptS2814DRename "k" as this name is already used in declaration at line 2202. 2
+ÏÏ :
+ 
+šš z
+
+javascriptS2814DRename "h" as this name is already used in declaration at line 3711. 2
+‚‚ :
+ 
+ÿÿ y
+
+javascriptS2814CRename "d" as this name is already used in declaration at line 505. 2
+úú :
+ 
+ùù z
+
+javascriptS2814DRename "a" as this name is already used in declaration at line 3060. 2
+ûû :
+ 
+ôô z
+
+javascriptS2814DRename "e" as this name is already used in declaration at line 6056. 2
+«/«/ :
+ 
+¨/¨/ z
+
+javascriptS2814DRename "m" as this name is already used in declaration at line 4649. 2
+­$­$ :
+ 
+©$©$ z
+
+javascriptS2814DRename "c" as this name is already used in declaration at line 4552. 2
+Ñ#Ñ# :
+ 
+È#È# z
+
+javascriptS2814DRename "y" as this name is already used in declaration at line 2211. 2
+ÕÕ :
+ 
+££ z
+
+javascriptS2814DRename "q" as this name is already used in declaration at line 2210. 2
+ÓÓ :
+ 
+¢¢ z
+
+javascriptS2814DRename "e" as this name is already used in declaration at line 1530. 2
+ıı :
+ 
+úú z
+
+javascriptS2814DRename "a" as this name is already used in declaration at line 4294. 2
+Í!Í! :
+ 
+Æ!Æ! z
+
+javascriptS2814DRename "g" as this name is already used in declaration at line 6421. 2
+—2—2 :
+ 
+•2•2 z
+
+javascriptS2814DRename "q" as this name is already used in declaration at line 5567. 2
+”,”,! ":
+ 
+¿+¿+ z
+
+javascriptS2814DRename "d" as this name is already used in declaration at line 4061. 2
+ßß :
+ 
+İİ z
+
+javascriptS2814DRename "r" as this name is already used in declaration at line 2594. 2
+¢¢A B:
+ 
+¢¢+ ,z
+
+javascriptS2814DRename "r" as this name is already used in declaration at line 2594. 2
+¢¢r s:
+ 
+¢¢+ ,z
+
+javascriptS2814DRename "g" as this name is already used in declaration at line 6060. 2
+¯/¯/ :
+ 
+¬/¬/ z
+
+javascriptS2814DRename "A" as this name is already used in declaration at line 2216. 2
+ÇÇ :
+ 
+¨¨ y
+
+javascriptS2814CRename "k" as this name is already used in declaration at line 417. 2
+§§ :
+ 
+¡¡ z
+
+javascriptS2814DRename "e" as this name is already used in declaration at line 3542. 2
+óó :
+ 
+ÖÖ z
+
+javascriptS2814DRename "h" as this name is already used in declaration at line 5427. 2
+¹*¹* :
+ 
+³*³* z
+
+javascriptS2814DRename "f" as this name is already used in declaration at line 3655. 2
+ÎÎ :
+ 
+ÇÇ z
+
+javascriptS2814DRename "k" as this name is already used in declaration at line 5560. 2
+¬,¬,! ":
+ 
+¸+¸+ z
+
+javascriptS2814DRename "g" as this name is already used in declaration at line 4031. 2
+ÀÀ :
+ 
+¿¿ z
+
+javascriptS2814DRename "k" as this name is already used in declaration at line 3096. 2
+šš  !:
+ 
+˜˜ z
+
+javascriptS2814DRename "O" as this name is already used in declaration at line 5680. 2
+¼,¼,$ %:
+ 
+°,°,  !z
+
+javascriptS2814DRename "a" as this name is already used in declaration at line 3377. 2
+µµ :
+ 
+±± z
+
+javascriptS2814DRename "b" as this name is already used in declaration at line 3900. 2
+¿¿ :
+ 
+¼¼ j
+
+javascriptS1862*This case duplicates the one on line 6124. 2
+í/í/ :
+ 
+ì/ì/ OriginalY
+
+javascriptS18544Remove this useless assignment to local variable "g" 2ˆˆñ òY
+
+javascriptS18544Remove this useless assignment to local variable "w" 2ÙÙ§ ¨Y
+
+javascriptS18544Remove this useless assignment to local variable "r" 2ÙÙŸ  W
+
+javascriptS18544Remove this useless assignment to local variable "c" 2
+ˆ$ˆ$ W
+
+javascriptS18544Remove this useless assignment to local variable "c" 2
+‰$‰$" #W
+
+javascriptS18544Remove this useless assignment to local variable "q" 2
+ô)ô) W
+
+javascriptS18544Remove this useless assignment to local variable "F" 2
+ô)ô) W
+
+javascriptS18544Remove this useless assignment to local variable "D" 2
+‡*‡* 

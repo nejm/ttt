@@ -1,0 +1,22 @@
+SonarQube plugins:
+  - SonarC# 6.5.0.3766 (csharp)
+  - SonarPython 1.8.0.1496 (python)
+  - SonarJava 4.15.0.12310 (java)
+  - Flex 2.3 (flex)
+  - SonarQube :: Plugins :: SCM :: Git 1.3.0.869 (scmgit)
+  - SonarXML 1.4.3.1027 (xml)
+  - SonarPHP 2.11.0.2485 (php)
+  - SonarTS 1.1.0.1079 (typescript)
+  - SonarQube :: Plugins :: SCM :: SVN 1.6.0.860 (scmsvn)
+  - SonarJS 3.2.0.5506 (javascript)
+Global properties:
+  - sonar.core.id=AWBCJU7JF030joGpFcH5
+  - sonar.core.startTime=2017-12-10T21:37:08+0100
+Settings for module: smi:smi
+  - sonar.projectBaseDir=D:\test\tt\bin
+  - sonar.projectKey=smi:smi
+  - sonar.projectName=My project
+  - sonar.projectVersion=1.0
+  - sonar.sourceEncoding=windows-1252
+  - sonar.sources=.
+  - sonar.working.directory=D:\test\tt\bin\.scannerwork

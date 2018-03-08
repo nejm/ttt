@@ -1,0 +1,20 @@
+t
+
+javascriptS2814BRename "i" as this name is already used in declaration at line 59. 2JJ :
+Ò;; ]
+
+javascriptUnusedVariable3Remove the declaration of the unused 'dp' variable. 244 ]
+
+javascriptUnusedVariable3Remove the declaration of the unused 'dn' variable. 266 ]
+
+javascriptUnusedVariable3Remove the declaration of the unused 'dc' variable. 255 _
+
+javascriptUnusedVariable5Remove the declaration of the unused 'lidx' variable. 2GG V
+
+javascriptS18545Remove this useless assignment to local variable "dp" 244 X
+
+javascriptS18547Remove this useless assignment to local variable "lidx" 2GG V
+
+javascriptS18545Remove this useless assignment to local variable "dn" 266 V
+
+javascriptS18545Remove this useless assignment to local variable "dc" 255 

@@ -1,0 +1,46 @@
+j
+
+javascriptS2259GTypeError can be thrown as "adler32cs" might be null or undefined here. 2
+ßß" +C
+
+javascriptS1442 Remove this usage of alert(...). 2
+ÿÿ. 6z
+
+javascriptS2814DRename "i" as this name is already used in declaration at line 1128. 2
+ıı :
+œ
+ËË à
+
+javascriptS2814RRename "tmpPagesContext" as this name is already used in declaration at line 1127. 2
+ÙÙ #:
+œ
+ÁÁ #Å
+
+javascriptS2814KRename "tmpPages" as this name is already used in declaration at line 1125. 2
+ÚÚ :
+œ
+ÂÂ É
+
+javascriptS2814MRename "tmpPagedim" as this name is already used in declaration at line 1126. 2
+ÛÛ :
+œ
+ÊÊ |
+
+javascriptS2814FRename "len" as this name is already used in declaration at line 1269. 2
+õ
+õ
+( +:
+œ
+ı	ı	5 8_
+
+javascriptUnusedVariable3Remove the declaration of the unused 'op' variable. 2
+ŸŸ m
+
+javascriptUnusedVariableARemove the declaration of the unused 'format_as_string' variable. 2
+¶¶ f
+
+javascriptS1854CRemove this useless assignment to local variable "format_as_string" 2
+¶¶ X
+
+javascriptS18545Remove this useless assignment to local variable "op" 2
+ŸŸ 

@@ -1,0 +1,11 @@
+ì
+
+javascriptS3403JRemove this "!==" check; it will always be true. Did you mean to use "!="? 2
+èè :
+¢
+èè :
+¢
+èè #a
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+‡‡ 

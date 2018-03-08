@@ -1,0 +1,180 @@
+Å
+
+javascriptS1764KCorrect one of the identical sub-expressions on both sides of operator "&&" 2
+óó, @:
+Ó
+óó (y
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 227. 2
+ÈÈ :
+Ó
+„„ y
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 227. 2
+¯¯ :
+Ó
+„„ y
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 476. 2
+‰‰ :
+Ó
+‹‹ y
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 476. 2
+ÎÎ :
+Ó
+‹‹ y
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 476. 2
+ÚÚ :
+Ó
+‹‹ y
+
+javascriptS2814CRename "j" as this name is already used in declaration at line 270. 2
+õõ :
+Ó
+éé |
+
+javascriptS2814FRename "elem" as this name is already used in declaration at line 271. 2
+ùù :
+Ó
+èè {
+
+javascriptS2814ERename "elm" as this name is already used in declaration at line 149. 2
+óó :
+Ó
+ïï y
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 406. 2
+©© :
+Ó
+ññ y
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 406. 2
+µµ :
+Ó
+ññ y
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 406. 2
+ºº :
+Ó
+ññ y
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 406. 2
+√√ :
+Ó
+ññ y
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 406. 2
+   :
+Ó
+ññ t
+
+javascriptS2814BRename "i" as this name is already used in declaration at line 27. 2.. :
+Ó t
+
+javascriptS2814BRename "i" as this name is already used in declaration at line 27. 2<< :
+Ó t
+
+javascriptS2814BRename "i" as this name is already used in declaration at line 27. 2FF :
+Ó y
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 182. 2
+ππ :
+Ó
+∂∂ y
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 182. 2
+øø :
+Ó
+∂∂ k
+
+javascriptEvalIReview the arguments of this "eval" call to make sure they are validated. 2
+œœ k
+
+javascriptEvalIReview the arguments of this "eval" call to make sure they are validated. 2
+œœ* .k
+
+javascriptEvalIReview the arguments of this "eval" call to make sure they are validated. 2
+¯¯ k
+
+javascriptEvalIReview the arguments of this "eval" call to make sure they are validated. 2
+¯¯* .k
+
+javascriptEvalIReview the arguments of this "eval" call to make sure they are validated. 2
+ÈÈ k
+
+javascriptEvalIReview the arguments of this "eval" call to make sure they are validated. 2
+ÈÈ* ._
+
+javascriptUnusedVariable3Remove the declaration of the unused 'at' variable. 2
+êê 
+e
+
+javascriptUnusedVariable9Remove the declaration of the unused 'auxJson2' variable. 2
+™™ e
+
+javascriptUnusedVariable9Remove the declaration of the unused 'auxJson1' variable. 2
+©© e
+
+javascriptUnusedVariable9Remove the declaration of the unused 'position' variable. 2
+ÀÀ a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'res2' variable. 2
+ÈÈ e
+
+javascriptUnusedVariable9Remove the declaration of the unused 'position' variable. 2
+ÙÙ \
+
+javascriptS18549Remove this useless assignment to local variable "joined" 2
+≠≠ \
+
+javascriptS18549Remove this useless assignment to local variable "joined" 2
+∞∞ ^
+
+javascriptS1854;Remove this useless assignment to local variable "auxJson1" 2
+©© ^
+
+javascriptS1854;Remove this useless assignment to local variable "auxJson2" 2
+™™ z
+
+javascriptS2703YAdd the "let", "const" or "var" keyword to this declaration of "avg" to make it explicit. 2ÖÖ 
+
+javascriptS2703`Add the "let", "const" or "var" keyword to this declaration of "standirize" to make it explicit. 2ss 
+~
+
+javascriptS2703]Add the "let", "const" or "var" keyword to this declaration of "orderBy" to make it explicit. 2‰‰ ~
+
+javascriptS2703_Add the "let", "const" or "var" keyword to this declaration of "normilize" to make it explicit. 2cc 	Å
+
+javascriptS2703`Add the "let", "const" or "var" keyword to this declaration of "sortTableR" to make it explicit. 2ŒŒ 
+~
+
+javascriptS2703]Add the "let", "const" or "var" keyword to this declaration of "joining" to make it explicit. 2˝˝ á
+
+javascriptS2703fAdd the "let", "const" or "var" keyword to this declaration of "verifyAttributes" to make it explicit. 2ºº |
+
+javascriptS2703[Add the "let", "const" or "var" keyword to this declaration of "union" to make it explicit. 2êê }
+
+javascriptS2703\Add the "let", "const" or "var" keyword to this declaration of "where2" to make it explicit. 2’’ Ç
+
+javascriptS2703aAdd the "let", "const" or "var" keyword to this declaration of "areDistinct" to make it explicit. 2ÆÆ 
+
+javascriptS2703^Add the "let", "const" or "var" keyword to this declaration of "distinct" to make it explicit. 2∑∑ }
+
+javascriptS2703ZAdd the "let", "const" or "var" keyword to this declaration of "elem" to make it explicit. 2
+–– z
+
+javascriptS2703YAdd the "let", "const" or "var" keyword to this declaration of "min" to make it explicit. 2«« z
+
+javascriptS2703YAdd the "let", "const" or "var" keyword to this declaration of "max" to make it explicit. 2ÔÔ {
+
+javascriptS2703ZAdd the "let", "const" or "var" keyword to this declaration of "join" to make it explicit. 2•• Ü
+
+javascriptS2703eAdd the "let", "const" or "var" keyword to this declaration of "conditionIsTrue" to make it explicit. 2ßß {
+
+javascriptS2703\Add the "let", "const" or "var" keyword to this declaration of "select" to make it explicit. 2 
+
+javascriptS2703^Add the "let", "const" or "var" keyword to this declaration of "sumGroup" to make it explicit. 2ØØ |
+
+javascriptS2703[Add the "let", "const" or "var" keyword to this declaration of "where" to make it explicit. 2çç 

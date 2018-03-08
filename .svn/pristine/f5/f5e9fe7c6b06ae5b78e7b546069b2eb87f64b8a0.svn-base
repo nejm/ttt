@@ -1,0 +1,619 @@
+j
+
+javascriptS2259GTypeError can be thrown as "newAnchor" might be null or undefined here. 2
+Ô$Ô$ 
+
+javascriptS930F"_pos" declared at line 10268 expects 1 argument, but 2 were provided. 2
+ŠSŠS &:$
+"Ç
+œPœP Formal parameters²
+
+javascriptS2583mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed. 2
+ü5ü5F J: 
+Ç
+ü5ü5M ZNever reached²
+
+javascriptS2583mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed. 2
+ı5ı5 : 
+Ç
+ı5ı5" #Never reached²
+
+javascriptS2583mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed. 2
+ü5ü5 : 
+Ç
+ü5ü5! .Never reached²
+
+javascriptS2583mChange this condition so that it does not always evaluate to "false"; some subsequent code is never executed. 2
+ı5ı50 4: 
+Ç
+ı5ı57 8Never reacheda
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+³!³!1 9a
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+¢9¢9Z ba
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+£9£9m ua
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+¤9¤9n va
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+¬9¬9M Ua
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+­9­9` ha
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+®9®9a ia
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+ê:ê:_ ga
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+ë:ë:_ ga
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+ì:ì:H Pa
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+î:î:W _a
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+–;–;` ha
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+š;š;k sa
+
+javascriptFunctionDefinitionInsideLoop'Define this function outside of a loop. 2
+;;` hz
+
+javascriptS2814DRename "i" as this name is already used in declaration at line 1528. 2
+ùù :
+Ç
+øø z
+
+javascriptS2814DRename "i" as this name is already used in declaration at line 1528. 2
+üü :
+Ç
+øø y
+
+javascriptS2814CRename "j" as this name is already used in declaration at line 237. 2
+ïï :
+Ç
+íí y
+
+javascriptS2814CRename "j" as this name is already used in declaration at line 275. 2
+”” :
+Ç
+““ w
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 127. 2
+€€ :
+Ç y
+
+javascriptS2814CRename "i" as this name is already used in declaration at line 181. 2
+¶¶ :
+Ç
+µµ z
+
+javascriptS2814DRename "i" as this name is already used in declaration at line 1543. 2
+ˆˆ :
+Ç
+‡‡ Ÿ
+
+javascriptS2681|This line will not be executed in a loop; only the first line of this 8-line block will be. The rest will execute only once. 2
+€U€U GL
+
+javascriptPrimitiveWrappersUse a literal value for this. 2
+‰‰B Wf
+
+javascriptUnusedVariable:Remove the declaration of the unused '_endpoint' variable. 2
+Ä%Ä% a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'elId' variable. 2
+Œ1Œ1  d
+
+javascriptUnusedVariable8Remove the declaration of the unused 'editing' variable. 2
+ßBßB 
+^
+
+javascriptUnusedVariable2Remove the declaration of the unused 'r' variable. 2
+”
+”
+ a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'self' variable. 2
+ÕSÕS	 e
+
+javascriptUnusedVariable9Remove the declaration of the unused 'renderer' variable. 2
+íUíU l
+
+javascriptUnusedVariable@Remove the declaration of the unused 'ta_context_down' variable. 2
+ËË ^
+
+javascriptUnusedVariable2Remove the declaration of the unused 'o' variable. 2
+Â#Â# k
+
+javascriptUnusedVariable?Remove the declaration of the unused '_newConnection' variable. 2
+Ğ3Ğ3 m
+
+javascriptUnusedVariableARemove the declaration of the unused 'suspendedElement' variable. 2
+Ş1Ş1, <c
+
+javascriptUnusedVariable7Remove the declaration of the unused '_super' variable. 2
+ô?ô? _
+
+javascriptUnusedVariable3Remove the declaration of the unused 'x2' variable. 2
+ØNØN( *`
+
+javascriptUnusedVariable4Remove the declaration of the unused 'cEl' variable. 2
+¸¸2 5c
+
+javascriptUnusedVariable7Remove the declaration of the unused '_super' variable. 2
+ÕFÕF h
+
+javascriptUnusedVariable<Remove the declaration of the unused 'resizeTimer' variable. 2
+İİ
+ a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'self' variable. 2
+ŒNŒN 
+h
+
+javascriptUnusedVariable<Remove the declaration of the unused '_intersects' variable. 2
+«« i
+
+javascriptUnusedVariable=Remove the declaration of the unused 'argsForClone' variable. 2
+˜-˜- e
+
+javascriptUnusedVariable9Remove the declaration of the unused 'touchend' variable. 2
+ÉÉ "c
+
+javascriptUnusedVariable7Remove the declaration of the unused '_super' variable. 2
+•E•E j
+
+javascriptUnusedVariable>Remove the declaration of the unused 'ta_context_up' variable. 2
+ËË+ 8^
+
+javascriptUnusedVariable2Remove the declaration of the unused 'y' variable. 2
+™N™N a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'done' variable. 2
+‚‚ a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'elId' variable. 2
+ù5ù5 f
+
+javascriptUnusedVariable:Remove the declaration of the unused 'touchmove' variable. 2
+ÉÉ. 7a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'Line' variable. 2
+œMœM 	d
+
+javascriptUnusedVariable8Remove the declaration of the unused 'ta_down' variable. 2
+ÊÊ 	^
+
+javascriptUnusedVariable2Remove the declaration of the unused 'k' variable. 2
+ f
+
+javascriptUnusedVariable:Remove the declaration of the unused 'labelText' variable. 2
+ÖIÖI4 =m
+
+javascriptUnusedVariableARemove the declaration of the unused 'suspendedElement' variable. 2
+õ%õ% _
+
+javascriptUnusedVariable3Remove the declaration of the unused 'dy' variable. 2
+ÁNÁN s
+
+javascriptUnusedVariableGRemove the declaration of the unused 'existingUniqueEndpoint' variable. 2
+ĞĞ 'e
+
+javascriptUnusedVariable9Remove the declaration of the unused 'jsBezier' variable. 2
+›› i
+
+javascriptUnusedVariable=Remove the declaration of the unused 'endpointFunc' variable. 2
+…… d
+
+javascriptUnusedVariable8Remove the declaration of the unused 'element' variable. 2
+…<…<' .s
+
+javascriptUnusedVariableGRemove the declaration of the unused '_getMatchingDroppables' variable. 2
+ää "a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'self' variable. 2
+ÔÔ l
+
+javascriptUnusedVariable@Remove the declaration of the unused 'jsPlumbInstance' variable. 2
+¾<¾< e
+
+javascriptUnusedVariable9Remove the declaration of the unused '_devNull' variable. 2
+•• 
+a
+
+javascriptUnusedVariable5Remove the declaration of the unused '_gel' variable. 2
+Ò3Ò3 d
+
+javascriptUnusedVariable8Remove the declaration of the unused '_normal' variable. 2
+ëë 	h
+
+javascriptUnusedVariable<Remove the declaration of the unused 'labelHeight' variable. 2
+ÖIÖI *i
+
+javascriptUnusedVariable=Remove the declaration of the unused 'SvgConnector' variable. 2
+ùQùQ f
+
+javascriptUnusedVariable:Remove the declaration of the unused '_encloses' variable. 2
+ÁÁ a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'self' variable. 2
+¯¯ 
+a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'path' variable. 2
+ğWğW c
+
+javascriptUnusedVariable7Remove the declaration of the unused 'points' variable. 2
+ÃJÃJ c
+
+javascriptUnusedVariable7Remove the declaration of the unused '_theta' variable. 2
+˜˜ c
+
+javascriptUnusedVariable7Remove the declaration of the unused '_super' variable. 2
+«F«F g
+
+javascriptUnusedVariable;Remove the declaration of the unused 'labelWidth' variable. 2
+ÖIÖI m
+
+javascriptUnusedVariableARemove the declaration of the unused '_fireDetachEvent' variable. 2
+¢,¢, r
+
+javascriptUnusedVariableFRemove the declaration of the unused 'dumpSegmentsToConsole' variable. 2
+DD !`
+
+javascriptUnusedVariable4Remove the declaration of the unused 'idx' variable. 2
+‰‰	 d
+
+javascriptUnusedVariable8Remove the declaration of the unused 'element' variable. 2
+Ø<Ø< _
+
+javascriptUnusedVariable3Remove the declaration of the unused 'dx' variable. 2
+ÂNÂN 
+q
+
+javascriptUnusedVariableERemove the declaration of the unused '_perpendicularLineTo' variable. 2
+ãã a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'stub' variable. 2
+§O§O c
+
+javascriptUnusedVariable7Remove the declaration of the unused '_super' variable. 2
+ŒAŒA _
+
+javascriptUnusedVariable3Remove the declaration of the unused 'y2' variable. 2
+ØNØNe g^
+
+javascriptUnusedVariable2Remove the declaration of the unused 'x' variable. 2
+˜N˜N l
+
+javascriptUnusedVariable@Remove the declaration of the unused 'jsPlumbInstance' variable. 2
+ı;ı; c
+
+javascriptUnusedVariable7Remove the declaration of the unused '_super' variable. 2
+úDúD f
+
+javascriptUnusedVariable:Remove the declaration of the unused '_curIndex' variable. 2
+š=š= l
+
+javascriptUnusedVariable@Remove the declaration of the unused 'findClearedLine' variable. 2
+ºKºK b
+
+javascriptUnusedVariable6Remove the declaration of the unused 'oKey2' variable. 2
+¾:¾: a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'grid' variable. 2
+ÄJÄJ a
+
+javascriptUnusedVariable5Remove the declaration of the unused '_att' variable. 2
+œ,œ, h
+
+javascriptUnusedVariable<Remove the declaration of the unused 'pointHelper' variable. 2
+ÌÌ c
+
+javascriptUnusedVariable7Remove the declaration of the unused '_super' variable. 2
+‹B‹B h
+
+javascriptUnusedVariable<Remove the declaration of the unused '_decodeFont' variable. 2
+üPüP a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'xmax' variable. 2
+¤W¤W i
+
+javascriptUnusedVariable=Remove the declaration of the unused 'updateMinMax' variable. 2
+İJİJ b
+
+javascriptUnusedVariable6Remove the declaration of the unused 'ta_up' variable. 2
+ÊÊ !g
+
+javascriptUnusedVariable;Remove the declaration of the unused 'touchstart' variable. 2
+ÉÉ a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'ymax' variable. 2
+¦W¦W i
+
+javascriptUnusedVariable=Remove the declaration of the unused 'labelPadding' variable. 2
+ÖIÖIF Rc
+
+javascriptUnusedVariable7Remove the declaration of the unused 'offPar' variable. 2
+€€ h
+
+javascriptUnusedVariable<Remove the declaration of the unused '_lineLength' variable. 2
+öö a
+
+javascriptUnusedVariable5Remove the declaration of the unused 'oidx' variable. 2
+™1™1e ii
+
+javascriptUnusedVariable=Remove the declaration of the unused '_pointOnLine' variable. 2
+ÒÒ j
+
+javascriptUnusedVariable>Remove the declaration of the unused 'filteredEvent' variable. 2
+ÄÄ	 ^
+
+javascriptS1854;Remove this useless assignment to local variable "jsBezier" 2
+›› Z
+
+javascriptS18547Remove this useless assignment to local variable "sign" 2
+»» 	a
+
+javascriptS1854>Remove this useless assignment to local variable "_lineLength" 2
+öö _
+
+javascriptS1854<Remove this useless assignment to local variable "_encloses" 2
+ÁÁ ]
+
+javascriptS1854:Remove this useless assignment to local variable "_normal" 2
+ëë 	b
+
+javascriptS1854?Remove this useless assignment to local variable "_pointOnLine" 2
+ÒÒ \
+
+javascriptS18549Remove this useless assignment to local variable "_theta" 2
+˜˜ a
+
+javascriptS1854>Remove this useless assignment to local variable "_intersects" 2
+«« j
+
+javascriptS1854GRemove this useless assignment to local variable "_perpendicularLineTo" 2
+ãã ]
+
+javascriptS1854:Remove this useless assignment to local variable "ta_down" 2
+ÊÊ 	e
+
+javascriptS1854BRemove this useless assignment to local variable "ta_context_down" 2
+ËË `
+
+javascriptS1854=Remove this useless assignment to local variable "touchstart" 2
+ÉÉ _
+
+javascriptS1854<Remove this useless assignment to local variable "touchmove" 2
+ÉÉ. 7^
+
+javascriptS1854;Remove this useless assignment to local variable "_devNull" 2
+•• 
+^
+
+javascriptS1854;Remove this useless assignment to local variable "touchend" 2
+ÉÉ "[
+
+javascriptS18548Remove this useless assignment to local variable "ta_up" 2
+ÊÊ !c
+
+javascriptS1854@Remove this useless assignment to local variable "ta_context_up" 2
+ËË+ 8Z
+
+javascriptS18547Remove this useless assignment to local variable "self" 2
+¯¯ 
+W
+
+javascriptS18544Remove this useless assignment to local variable "r" 2
+”
+”
+ W
+
+javascriptS18544Remove this useless assignment to local variable "k" 2
+ Z
+
+javascriptS18547Remove this useless assignment to local variable "self" 2
+ÔÔ l
+
+javascriptS1854IRemove this useless assignment to local variable "_getMatchingDroppables" 2
+ää "a
+
+javascriptS1854>Remove this useless assignment to local variable "pointHelper" 2
+ÌÌ Z
+
+javascriptS18547Remove this useless assignment to local variable "done" 2
+‚‚ \
+
+javascriptS18549Remove this useless assignment to local variable "offPar" 2
+€€ c
+
+javascriptS1854@Remove this useless assignment to local variable "filteredEvent" 2
+ÄÄ	 b
+
+javascriptS1854?Remove this useless assignment to local variable "endpointFunc" 2
+…… Y
+
+javascriptS18546Remove this useless assignment to local variable "cEl" 2
+¸¸2 5W
+
+javascriptS18544Remove this useless assignment to local variable "o" 2
+Â#Â# f
+
+javascriptS1854CRemove this useless assignment to local variable "suspendedElement" 2
+õ%õ% _
+
+javascriptS1854<Remove this useless assignment to local variable "_endpoint" 2
+Ä%Ä% Z
+
+javascriptS18547Remove this useless assignment to local variable "_att" 2
+œ,œ, f
+
+javascriptS1854CRemove this useless assignment to local variable "_fireDetachEvent" 2
+¢,¢, b
+
+javascriptS1854?Remove this useless assignment to local variable "argsForClone" 2
+˜-˜- Z
+
+javascriptS18547Remove this useless assignment to local variable "oidx" 2
+™1™1e iZ
+
+javascriptS18547Remove this useless assignment to local variable "elId" 2
+Œ1Œ1  f
+
+javascriptS1854CRemove this useless assignment to local variable "suspendedElement" 2
+Ş1Ş1, <d
+
+javascriptS1854ARemove this useless assignment to local variable "_newConnection" 2
+Ğ3Ğ3 Z
+
+javascriptS18547Remove this useless assignment to local variable "_gel" 2
+Ò3Ò3 Z
+
+javascriptS18547Remove this useless assignment to local variable "elId" 2
+ù5ù5 [
+
+javascriptS18548Remove this useless assignment to local variable "oKey2" 2
+¾:¾: e
+
+javascriptS1854BRemove this useless assignment to local variable "jsPlumbInstance" 2
+ı;ı; ]
+
+javascriptS1854:Remove this useless assignment to local variable "element" 2
+…<…<' .e
+
+javascriptS1854BRemove this useless assignment to local variable "jsPlumbInstance" 2
+¾<¾< ]
+
+javascriptS1854:Remove this useless assignment to local variable "element" 2
+Ø<Ø< _
+
+javascriptS1854<Remove this useless assignment to local variable "_curIndex" 2
+š=š= \
+
+javascriptS18549Remove this useless assignment to local variable "_super" 2
+ô?ô? \
+
+javascriptS18549Remove this useless assignment to local variable "_super" 2
+ŒAŒA \
+
+javascriptS18549Remove this useless assignment to local variable "_super" 2
+‹B‹B k
+
+javascriptS1854HRemove this useless assignment to local variable "dumpSegmentsToConsole" 2
+DD !\
+
+javascriptS18549Remove this useless assignment to local variable "_super" 2
+úDúD \
+
+javascriptS18549Remove this useless assignment to local variable "_super" 2
+•E•E \
+
+javascriptS18549Remove this useless assignment to local variable "_super" 2
+«F«F \
+
+javascriptS18549Remove this useless assignment to local variable "_super" 2
+ÕFÕF Y
+
+javascriptS18546Remove this useless assignment to local variable "cxy" 2
+ÂHÂH Z
+
+javascriptS18547Remove this useless assignment to local variable "grid" 2
+ÄJÄJ b
+
+javascriptS1854?Remove this useless assignment to local variable "updateMinMax" 2
+İJİJ e
+
+javascriptS1854BRemove this useless assignment to local variable "lastOrientation" 2
+µKµK e
+
+javascriptS1854BRemove this useless assignment to local variable "findClearedLine" 2
+ºKºK Z
+
+javascriptS18547Remove this useless assignment to local variable "Line" 2
+œMœM 	Z
+
+javascriptS18547Remove this useless assignment to local variable "self" 2
+ŒNŒN 
+W
+
+javascriptS18544Remove this useless assignment to local variable "y" 2
+™N™N X
+
+javascriptS18545Remove this useless assignment to local variable "dy" 2
+ÁNÁN X
+
+javascriptS18545Remove this useless assignment to local variable "x2" 2
+ØNØN( *W
+
+javascriptS18544Remove this useless assignment to local variable "x" 2
+˜N˜N X
+
+javascriptS18545Remove this useless assignment to local variable "dx" 2
+ÂNÂN 
+X
+
+javascriptS18545Remove this useless assignment to local variable "y2" 2
+ØNØNe gZ
+
+javascriptS18547Remove this useless assignment to local variable "stub" 2
+§O§O a
+
+javascriptS1854>Remove this useless assignment to local variable "_decodeFont" 2
+üPüP b
+
+javascriptS1854?Remove this useless assignment to local variable "SvgConnector" 2
+ùQùQ Z
+
+javascriptS18547Remove this useless assignment to local variable "self" 2
+ÕSÕS	 Z
+
+javascriptS18547Remove this useless assignment to local variable "xmax" 2
+¤W¤W Z
+
+javascriptS18547Remove this useless assignment to local variable "ymax" 2
+¦W¦W ‹
+
+javascriptS2703hAdd the "let", "const" or "var" keyword to this declaration of "max_distance_below" to make it explicit. 2
+ËË 0„
+
+javascriptS2703aAdd the "let", "const" or "var" keyword to this declaration of "jsPlumbUtil" to make it explicit. 2
+ÒÒ z
+
+javascriptS2703WAdd the "let", "const" or "var" keyword to this declaration of "j" to make it explicit. 2
+”” Œ
+
+javascriptS2703iAdd the "let", "const" or "var" keyword to this declaration of "userDefinedLocation" to make it explicit. 2
+½=½= #]
+
+javascriptParentheses!Remove those useless parentheses. 2
+ÉKÉK+ ,:
+Ç
+ËKËKU V]
+
+javascriptParentheses!Remove those useless parentheses. 2
+ÍKÍK( ):
+Ç
+ÏKÏKY Z]
+
+javascriptParentheses!Remove those useless parentheses. 2
+ÒKÒK+ ,:
+Ç
+ÔKÔKU V]
+
+javascriptParentheses!Remove those useless parentheses. 2
+ÖKÖK( ):
+Ç
+ØKØKU V

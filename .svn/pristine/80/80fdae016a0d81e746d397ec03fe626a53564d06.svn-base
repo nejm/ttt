@@ -1,0 +1,16 @@
+t
+
+javascriptS2814BRename "w" as this name is already used in declaration at line 23. 2~ :
+Î' (c
+
+javascriptUnusedVariable7Remove the declaration of the unused 'result' variable. 2
+áá c
+
+javascriptUnusedVariable7Remove the declaration of the unused 'script' variable. 2
+ýý \
+
+javascriptS18549Remove this useless assignment to local variable "result" 2
+áá \
+
+javascriptS18549Remove this useless assignment to local variable "script" 2
+ýý 

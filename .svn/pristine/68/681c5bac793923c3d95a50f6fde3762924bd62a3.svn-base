@@ -1,0 +1,45 @@
+g
+
+javascriptS2259DTypeError can be thrown as "object" might be null or undefined here. 2
+ÑÑ j
+
+javascriptS2259GTypeError can be thrown as "splitText" might be null or undefined here. 2
+ïï( 1±
+
+javascriptS2583lChange this condition so that it does not always evaluate to "true"; some subsequent code is never executed. 2
+íí !: 
+Ñ
+íí% 'Never reachedz
+
+javascriptS2814DRename "i" as this name is already used in declaration at line 2362. 2
+ÍÍ :
+Ñ
+ºº |
+
+javascriptS2814FRename "hook" as this name is already used in declaration at line 534. 2
+¼¼ :
+Ñ
+–– |
+
+javascriptS2814FRename "cell" as this name is already used in declaration at line 492. 2
+ˆˆ :
+Ñ
+ìì {
+
+javascriptS2814ERename "col" as this name is already used in declaration at line 491. 2
+‡‡ :
+Ñ
+ëë y
+
+javascriptS2814CRename "j" as this name is already used in declaration at line 490. 2
+†† :
+Ñ
+êê L
+
+javascriptS1472*Make those call arguments start on line 86 2	Xš	 r
+
+javascriptS3523OReview this "Function" call and make sure its arguments are properly validated. 2
+÷÷ ^
+
+javascriptUnusedVariable2Remove the declaration of the unused '_' variable. 2
+íí 
