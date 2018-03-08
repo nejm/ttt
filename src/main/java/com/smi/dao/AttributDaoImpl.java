@@ -16,9 +16,8 @@
 package com.smi.dao;
 
 import com.smi.model.Attribut;
-import com.smi.model.Dashboard;
+
 import java.util.List;
-import javax.persistence.NamedQuery;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

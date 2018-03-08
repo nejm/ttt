@@ -15,7 +15,6 @@
  */
 package com.smi.dao;
 
-import com.smi.model.Dashboard;
 import com.smi.model.DashboardUser;
 import java.util.List;
 import org.hibernate.Query;
@@ -47,9 +46,9 @@ public class DashboardUserDaoImpl implements DashboardUserDao {
 
     @Override
     @Transactional
-    public List<DashboardUser> getByRole(String role_name) {
+    public List<DashboardUser> getByRole(String roleName) {
         Session session = sessionFactory.getCurrentSession();
-        Query query = session.getNamedQuery("DashboardUser.findByRoleName").setString("roleName", role_name);
+        Query query = session.getNamedQuery("DashboardUser.findByRoleName").setString("roleName", roleName);
         return query.list();
 
     }

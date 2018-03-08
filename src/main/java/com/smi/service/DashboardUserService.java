@@ -26,7 +26,7 @@ public interface DashboardUserService {
 
     List<DashboardUser> getByUser(String username);
 
-    List<DashboardUser> getByRole(String role_name);
+    List<DashboardUser> getByRole(String roleName);
 
     Long save(DashboardUser dashboard);
 

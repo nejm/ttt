@@ -57,7 +57,9 @@ public class UserDaoImpl implements UserDao {
         session = sessionFactory.openSession();
         session.beginTransaction();
         List<Users> users = session.getNamedQuery("Users.findAll").list();
-        //session.close();
+        for(int i =0; i < users.size(); i++) {
+        	users.get(i).setPassword("[PROTECTED]");
+        }
         return users;
 
     }

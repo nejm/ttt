@@ -5,9 +5,13 @@ import org.apache.log4j.Logger;
 import com.smi.dao.UserDao;
 import com.smi.dao.UserDaoImpl;
 import com.smi.model.Users;
+import com.smi.util.VerifyRecaptcha;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.EnumSet;
 import java.util.List;
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import org.hibernate.Session;
@@ -32,10 +36,16 @@ public class ImplUserService implements UserDetailsService {
 
     UserDao userDao = new UserDaoImpl();
     
+    
     @Transactional
     @Override
     public UserDetails loadUserByUsername(String name) throws UsernameNotFoundException {
-       
+    	
+    	//ServletRequestAttributes sra = ((ServletRequestAttributes)RequestContextHolder.currentRequestAttributes());
+        
+        //System.out.println("loadUserByUsername : "+VerifyRecaptcha.verify(sra.getRequest().getParameter("g-recaptcha-response").toString()));
+        
+        System.out.println("IN SPRING SECURITY");
         if (name != null && !name.equals("")) {
             Users user = userDao.findByUsername(name);
 

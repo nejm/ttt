@@ -24,7 +24,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Lob;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -48,6 +47,8 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Statistique.findByCreationDate", query = "SELECT s FROM Statistique s WHERE s.creationDate = :creationDate")})
 public class Statistique implements Serializable {
 
+
+
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
@@ -66,7 +67,9 @@ public class Statistique implements Serializable {
     @Column(name = "CREATION_DATE")
     @Temporal(TemporalType.TIMESTAMP)
     private Date creationDate;
-
+    @Column(name = "TYPE")
+    private String type;
+    
     public Statistique() {
     }
 
@@ -145,6 +148,15 @@ public class Statistique implements Serializable {
     @Override
     public String toString() {
         return "com.smi.model.Statistique[ id=" + id + " ]";
+    }
+
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
     
 }

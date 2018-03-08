@@ -25,8 +25,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service("usersService")
 public class UserServiceImpl implements UserService{
 
-     UserDao userDao = new UserDaoImpl();
-    
+     UserDao userDao = new UserDaoImpl();  
     
     @Override
     public Users findByUsername(String username) {
@@ -57,6 +56,7 @@ public class UserServiceImpl implements UserService{
     public void deleteUser(Users user) {
         userDao.deleteUser(user);
     }
+
 
     
 }

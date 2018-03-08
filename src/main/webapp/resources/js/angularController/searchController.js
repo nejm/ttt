@@ -32,7 +32,7 @@ myApp.controller('searchController', function ($scope, $http) {
             for (var elem in response.data) {
                 for (var i = 0; i < response.data[elem].length; i++) {
                     if (!$scope.foundStat(response.data[elem][i])) {
-                        $scope.statistiques.push(response.data[elem][i])
+                        $scope.statistiques.push(response.data[elem][i]);
                     }
                 }
 

@@ -14,19 +14,12 @@ import javax.websocket.server.ServerEndpoint;
 @ServerEndpoint("/chat")
 public class Chat {
     
-//    private Session mySession;
     
     @OnMessage
-    public void onMessage(String message,Session session) throws IOException,
-            InterruptedException {
-        System.out.println("User input: " + message+" : "+session.getUserPrincipal().getName());
-       
+    public void onMessage(String message,Session session) {
+        
     }
 
-//    @OnOpen
-//    public void onOpen(Session session) {
-//        mySession = session;
-//    }
 
     @OnClose
     public void onClose(Session session) {

@@ -137,7 +137,6 @@ public class AngularController {
 
         for (Role r : listRoles) {
             List<Statistique> statistique = new ArrayList<>();
-            stats = new ArrayList<>();
             stats = statUserService.findByRole(r.getRoleName());
             for (Statuser s : stats) {
                 statistique.add(statistiqueService.findById(s.getIdStat()));
@@ -181,7 +180,6 @@ public class AngularController {
         for (HashMap<String, String> s : roles) {
             statuser.setRolename(s.get("roleName"));
             statUserService.save(statuser);
-            System.out.println("roles ::: " + statuser.toString());
         }
         statuser.setRolename("");
         for (HashMap<String, String> s : users) {
@@ -230,7 +228,6 @@ public class AngularController {
 
     @RequestMapping(value = "/rest/ressources/update", method = RequestMethod.POST)
     public void updateService(@RequestBody Ressources ressource) {
-        System.out.println("com.smi.controller.AngularController.updateService()" + ressource.getLogin());
         ressourceService.edit(ressource);
     }
 
@@ -277,7 +274,6 @@ public class AngularController {
         String tableName = (String) o.get("tableName");
         String port = (String) o.get("port");
 
-        System.out.println("the object : " + o);
 
         if (o.get("type").toString().toLowerCase().equals("oracle")) {
             String driverType = "thin";
@@ -345,8 +341,6 @@ public class AngularController {
         String tableName = (String) o.get("tableName");
         String port = (String) o.get("port");
 
-        System.out.println("the object : " + o);
-
         if (o.get("type").toString().toLowerCase().equals("oracle")) {
             String driverType = "thin";
 
@@ -387,7 +381,6 @@ public class AngularController {
     
     @RequestMapping(value = "/rest/alias/save", method = RequestMethod.POST)
     public void saveAlias(@RequestBody Alias alias) {
-        System.out.println(alias.getName());
         aliasService.save(alias);
     }
 
@@ -403,7 +396,6 @@ public class AngularController {
     
     @RequestMapping(value = "/rest/data", method = RequestMethod.POST)
     public String saveJson(@RequestBody JSONObject o) {
-        System.out.println(o.toString());
         try (FileWriter file = new FileWriter("data.json")) {
 
             file.write(o.toString());

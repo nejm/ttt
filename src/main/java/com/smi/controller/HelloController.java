@@ -1,5 +1,6 @@
 package com.smi.controller;
 
+import com.smi.model.Statistique;
 import com.smi.service.StatistiqueService;
 import java.security.Principal;
 import javax.servlet.http.HttpServletResponse;
@@ -7,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.session.Session;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -20,13 +23,14 @@ public class HelloController {
     @Autowired
     @Qualifier("statService")
     StatistiqueService statistiqueService;
-    
+   
 
-    @RequestMapping(value = {"","/"}, method = RequestMethod.GET)
+    @RequestMapping(value = {"", "/"}, method = RequestMethod.GET)
     public ModelAndView welcomePage(Principal principal) {
-        if(principal != null)
+        if (principal != null) {
             return new ModelAndView("redirect:/home");
-        ModelAndView model = new ModelAndView(); 
+        }
+        ModelAndView model = new ModelAndView();
         model.setViewName("login");
         return model;
     }
@@ -141,7 +145,7 @@ public class HelloController {
             model.addObject("msg", "You've been logged out successfully.");
         }
 
-        if (error == null && logout == null && principal != null) {           
+        if (error == null && logout == null && principal != null) {
             return new ModelAndView("redirect:/home");
         }
 
@@ -189,14 +193,14 @@ public class HelloController {
         model.setViewName("rawData");
         return model;
     }
-    
+
     @RequestMapping(value = "/remote", method = RequestMethod.GET)
     public ModelAndView remote() {
         ModelAndView model = new ModelAndView();
         model.setViewName("remote");
         return model;
     }
-    
+
     @RequestMapping(value = "/chat", method = RequestMethod.GET)
     public ModelAndView chat(Principal principal) {
         ModelAndView model = new ModelAndView();
@@ -204,7 +208,4 @@ public class HelloController {
         model.setViewName("chat");
         return model;
     }
-    
-    
-
 }

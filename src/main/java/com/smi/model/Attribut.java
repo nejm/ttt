@@ -16,8 +16,6 @@
 package com.smi.model;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
-import java.math.BigInteger;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -116,15 +114,11 @@ public class Attribut implements Serializable {
 
     @Override
     public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
         if (!(object instanceof Attribut)) {
             return false;
         }
         Attribut other = (Attribut) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
+        return !(this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id));
     }
 
     @Override

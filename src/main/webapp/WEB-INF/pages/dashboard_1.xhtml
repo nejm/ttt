@@ -31,7 +31,7 @@
         <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />
         <link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" />
 
-        <script src="/Dashboard/resources/js/anychart.js" type="text/javascript"></script>
+        <script src="/Dashboard/resources/js/anychart/anychart.js" type="text/javascript"></script>
         <script src="https://cdn.anychart.com/releases/8.0.0/themes/light_provence.min.js"></script>
         
         <script src="https://cdn.anychart.com/releases/8.0.1/geodata/countries/tunisia/tunisia.js"></script>
@@ -350,6 +350,8 @@
                 var idTag = $(tag).attr("id");
                 $('#' + idTag + "Child").slideToggle();
             }
+            
+            $('#sortable').sortable();
 
         </script>
     </body>

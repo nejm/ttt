@@ -79,6 +79,29 @@ my2App.controller('dashboardController', function ($scope, $http, $location) {
             });
         });
     };
+    
+    $scope.getStatistiques = function(){
+        $scope.labelsByDate = [];
+        $scope.dataByDate = [];
+        $scope.allStats = [];
+        $http.get("/Dashboard/rest/statistique").then(function(response){
+            var dt = {};
+            for(var i=0;i<response.data.length;i++){
+                if(typeof dt[response.data[i].creationDate] != 'undefined'){
+                    dt[response.data[i].creationDate]++;
+                }else{
+                    dt[response.data[i].creationDate] = 1;
+                }
+            }
+            for(var elem in dt){
+                $scope.labelsByDate.push(elem);
+                $scope.dataByDate.push(dt[elem]);
+                
+            }
+            
+            console.log($scope.labelsByDate,$scope.dataByDate);
+        });
+    };
 
     $scope.getService = function (ressource, service) {
         console.log("service", service);
@@ -191,6 +214,7 @@ my2App.controller('dashboardController', function ($scope, $http, $location) {
         ws.send(JSON.stringify(msg));
         //$scope.$apply();
     };
+    
 });
 
 

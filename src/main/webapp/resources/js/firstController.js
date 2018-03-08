@@ -155,14 +155,14 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
         return result;
     };
 
-    $scope.clock = "loading clock...";
-    $scope.tickInterval = 1000;
-
-    tick = function () {
-        $scope.clock = Date.now();
-        $timeout(tick, $scope.tickInterval);
-    };
-    $timeout(tick, $scope.tickInterval);
+//    $scope.clock = "loading ...";
+//    $scope.tickInterval = 1000;
+//
+//    tick = function () {
+//        $scope.clock = Date.now();
+//        $timeout(tick, $scope.tickInterval);
+//    };
+//    $timeout(tick, $scope.tickInterval);
     $scope.getRessource = function (id) {
         for (var i = 0; i < $scope.ressources.length; i++) {
             if ($scope.ressources[i].ressource.id == id) {
@@ -239,7 +239,7 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
                         });
 
             } else {
-                swal("Duplication !!", "Un ressource avec le même nom déja existe !!", "error");
+                swal("Duplication !!", "Une ressource avec le même nom existe déja !!", "error");
             }
         }
 
@@ -250,8 +250,7 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
         $('#' + resource.ressource.id)
                 .append($compile("<li id='li" + service.id +
                         "'><a><span ng-click=drawService('" +
-                        service.service.id +
-                        "') >" +
+                        service.service.id + "') >" +
                         service.service.name +
                         "</span><i ng-click='deleteService(" +
                         service.service.id +
@@ -293,7 +292,7 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
                     $http.post("/Dashboard/rest/services/delete", deletedService).then(function (response) {
                         $scope.log.push({
                             type: 'success',
-                            log: "services supprimées avec succès"
+                            log: "Service supprimé avec succès"
                         });
                     });
                 }
@@ -316,7 +315,7 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
             type: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Oui, supprimer!",
+            confirmButtonText: "Oui, supprimer !",
             closeOnConfirm: false
         }, function () {
             var deletedService = {
@@ -542,17 +541,20 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
                 $scope.services[$scope.iii].service.attributesL = response.data.length;
                 $scope.services[$scope.iii].service.attributes = response.data;
                 $scope.newState($scope.iii, 'default');
+            }, function (e) {
+                console.log("ERROR LINE 545 : ", e);
             });
         } else {
             $scope.services[service].service.attributesL = $scope.services[service].service.attributes.length;
             $scope.newState(service, 'default');
         }
-        ;
         $http.get("/Dashboard/rest/attributs/" + service).then(function (response) {
             for (var i = 0; i < response.data.length; i++) {
                 $scope.aliases[response.data[i].original] = response.data[i].alias;
             }
 
+        }, function (e) {
+            console.log("ERROR LINE 557 : ", e);
         });
     };
     $scope.expand = function (s) {
@@ -1012,19 +1014,26 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
         }
 
         if ($scope.query.stat == 'Tableau') {
+            $scope.statType = 'table';
             $scope.generateTable(res, showmodal);
         } else if ($scope.query.stat == 'Bar') {
+            $scope.statType = 'bar';
             $scope.generateBar(res, $scope.query.x, $scope.query.y, showmodal);
         } else if ($scope.query.stat == 'Pie') {
+            $scope.statType = 'pie';
             $scope.generatePie(res, $scope.query.pieLabels, $scope.query.pieData, showmodal);
         } else if ($scope.query.stat == 'Line') {
+            $scope.statType = 'line';
             $scope.generateLine(res, $scope.query.lineLabels, $scope.query.lineData, showmodal);
         } else if ($scope.query.stat == 'Map') {
 
-            if ($scope.query.mapType == 1)
+            if ($scope.query.mapType == 1) {
+                $scope.statType = 'world';
                 $scope.generateMapW(res, $scope.query.codeISO, $scope.query.mapPays, $scope.query.mapData, showmodal);
-            else
+            } else {
+                $scope.statType = 'local';
                 $scope.generateMapT(res, $scope.query.codeISO, $scope.query.mapPays, $scope.query.mapData, showmodal);
+            }
         }
     };
 
@@ -1396,18 +1405,26 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
                 var res = $scope.results['s' + id];
                 $scope.resultAttrs = $scope.getResultAttributes(res);
                 if ($scope.query.stat == 'Tableau') {
+                    $scope.statType = 'table';
                     $scope.generateTable(res, $scope.showmodal);
                 } else if ($scope.query.stat == 'Bar') {
+                    $scope.statType = 'bar';
                     $scope.generateBar(res, $scope.query.x, $scope.query.y, $scope.showmodal);
                 } else if ($scope.query.stat == 'Pie') {
+                    $scope.statType = 'pie';
                     $scope.generatePie(res, $scope.query.pieLabels, $scope.query.pieData, $scope.showmodal);
                 } else if ($scope.query.stat == 'Line') {
+                    $scope.statType = 'line';
                     $scope.generateLine(res, $scope.query.lineLabels, $scope.query.lineData, $scope.showmodal);
                 } else if ($scope.query.stat == 'Map') {
-                    if ($scope.query.mapType == 1)
+                    if ($scope.query.mapType == 1) {
+                        $scope.statType = 'world';
+
                         $scope.generateMapW(res, $scope.query.codeISO, $scope.query.mapPays, $scope.query.mapData, showmodal);
-                    else
+                    } else {
                         $scope.generateMapT(res, $scope.query.codeISO, $scope.query.mapPays, $scope.query.mapData, showmodal);
+                        $scope.statType = 'local';
+                    }
                 }
             } else if (op.optype == 'o') {
                 var id = 's' + op.classes[0].idd;
@@ -1922,20 +1939,12 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
     };
 
     $scope.generateBar = function (res, x, y, showmodal) {
-        if (!$scope.isNewStat) {
+        if ($scope.isNewStat) {
             console.log("New Stat");
             setTimeout(function () {
                 var canvas = document.getElementById('bar');
-                var url = canvas.toDataURL();
-
-                var link = document.createElement("a");
-                link.download = "bar" + Date.now();
-                link.href = canvas.toDataURL();
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                delete link;
-            }, 2000)
+                $scope.dataUrl = canvas.toDataURL();
+            }, 1000)
         }
         $scope.debug.results.push({
             bar: res
@@ -2474,13 +2483,15 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
                 target.pieAttributes = array.concat(array2);
                 target.lineAttributes = array.concat(array2);
                 target.mapAttributes = array.concat(array2);
-            } else if (source.name == 'select' || source.name == 'where' ||
-                    source.name == 'where2' || source.name == 'extend') {
+            } else if (source.name == 'select' || source.name == 'extend') {
+
+                console.log("if", $scope.unify($scope.getAttr(source.attributes)));
                 target.barAttributes = $scope.unify($scope.getAttr(source.attributes));
                 target.pieAttributes = $scope.unify($scope.getAttr(source.attributes));
                 target.lineAttributes = $scope.unify($scope.getAttr(source.attributes));
                 target.mapAttributes = $scope.unify($scope.getAttr(source.attributes));
             } else {
+                console.log("else", $scope.unify(source.attributes));
                 target.barAttributes = $scope.unify(source.attributes);
                 target.pieAttributes = $scope.unify(source.attributes);
                 target.lineAttributes = $scope.unify(source.attributes);
@@ -2634,6 +2645,8 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
                     }
                 }
             }
+
+            console.log($scope.statistiques);
         });
     };
 
@@ -2751,6 +2764,11 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
     $scope.exporter = function () {
         $scope.statistique.createdBy = $scope.username;
         $scope.statistique.creationDate = Date.now();
+        $scope.statistique.type = $scope.statType;
+
+//        if(typeof $scope.dataUrl != 'undefined'){
+//            $scope.statistique.dataurl = $scope.dataUrl;
+//        }
         if ($scope.edit) {
             $http.post("/Dashboard/rest/statistique/edit", $scope.statistique).then(function (response) {
                 swal("modification avec succées", "success");
@@ -2762,6 +2780,7 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
                 if (data) {
                     swal("Erreur!", "Choisissez un autre nom !!", "error");
                 } else {
+                    console.log($scope.statistique)
                     $http.post("/Dashboard/rest/statistique", $scope.statistique).then(function (response) {
                         var newStatId = response.data;
                         $scope.currentStatId = newStatId;
@@ -3180,11 +3199,11 @@ myApp.controller('FirstExampleController', function (DTOptionsBuilder, DTColumnB
             title = $scope.dd.statsDashboard[index].text;
         }
         var li = $("<li id='li" + $('#sortable').children().length +
-                "' class='panel panel-default' style='overflow : hidden;position : relative'>" +
-                "<div class='panel-heading'>" +
+                "' class='card card-3 col-md-6' style='overflow : hidden;position : relative'>" +
+                "<div class='center'>" +
                 title +
                 "<div  style='position : absolute;right : 0;top:0;margin-top:5px'>" +
-                "<button class='btn btn-default btn-sm' ng-click='getInfo(" +
+                "<button class='btn btn-xs btn-default' ng-click='getInfo(" +
                 $('#sortable').children().length +
                 ")'><i class='fa fa-info'></i></button></div></div></li>");
         $('#sortable').append($compile(li)($scope));

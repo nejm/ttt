@@ -25,7 +25,12 @@
         
     <mvc:annotation-driven />
     <mvc:resources mapping="/resources/**" location="/resources/" />
-        
+    <mvc:cors>
+        <mvc:mapping path="/**"
+                     allowed-origins="*"
+                     allowed-headers="Content-Type, Access-Control-Allow-Origin, Access-Control-Allow-Headers, Authorization, X-Requested-With, requestId, Correlation-Id"
+                     allowed-methods="GET, PUT, POST, DELETE"/>
+    </mvc:cors>
               
     <bean id="dataSource" class="oracle.jdbc.pool.OracleDataSource" destroy-method="close">
         <property name="URL" value="jdbc:oracle:thin:@//localhost:1521/XE" />
